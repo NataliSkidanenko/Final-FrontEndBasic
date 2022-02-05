@@ -69,4 +69,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+body {
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
+}
 /*# sourceMappingURL=style.css.map */
