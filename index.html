@@ -8,19 +8,12 @@
     <title>Hlegal — Homepage</title>
 </head>
 <body>
-    <div class="container container--bg">
+    <div class="main">
 
         <div class="splash">
 
             <header class="header header--light">
-                <div class="header__block">
-                    <div class="logo">
-                        <a href="index.html" class="logo__link">
-                            <img src="" alt="" class="logo__img">
-                        </a>
-                    </div>
-                </div>
-                <div class="header__block">
+                <div class="header__block header__block--bg">
                     <ul class="language">
                         <li class="language__item">
                             <a href="#" class="language__link">
@@ -32,92 +25,91 @@
                                 ру
                             </a>
                         </li>
-                        <li class="language__item">
+                        <li class="language__item language__item--active">
                             <a href="#" class="language__link">
                                 en
                             </a>
                         </li>
                     </ul>
                     <ul class="contacts">
-                        <li class="contacts__item">
-                            <a href="#" class="contacts__link">
+                        <li class="contacts__item contacts__item--address contacts__item--desktop">
+                            <a href="#" class="contacts__link ">
                                 Kyiv, Mechnikova str, 14/1
                             </a>
                         </li>
-                        <li class="contacts__item">
-                            <a href="#" class="contacts__link">
+                        <li class="contacts__item contacts__item--phone">
+                            <a href="tel:0800211927" class="contacts__link">
                                 0800 211 927
                             </a>
                         </li>
-                        <li class="contacts__item">
+                        <li class="contacts__item contacts__item--social contacts__item--desktop">
                             <a href="#" class="contacts__link">
-
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav">
-                        <li class="nav__item">
-                            <a href="index.html" class="nav__link">
-                                Главная
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="pages/grooming.html" class="nav__link">
-                                Груминг
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="pages/hotel.html" class="nav__link">
-                                Отель
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="pages/vetrinary.html" class="nav__link">
-                                Ветклиника
+                                <svg class="contacts__vec" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="white"/>
+                                    </svg>                                    
                             </a>
                         </li>
                     </ul>
                 </div>
-            </header>
 
+                <div class="header__block">
+                    <div class="logo">
+                        <a href="index.html" class="logo__link">
+                            <img src="img/general/logo-white.svg" alt="Logo Hlegal" class="logo__img">
+                        </a>
+                    </div>
+
+                    <div class="nav">
+                        <input id="nav__toggle" class="nav__toggle" type="checkbox">
+                        <label class="nav__btn" for="nav__toggle">
+                            <span></span>
+                        </label>
+                        <ul class="nav__box">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">
+                                    about us
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">
+                                    services
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">
+                                    team
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">
+                                    publications
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">
+                                    contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
             <h1 class="splash__heading">
                 you legal solutions provider
             </h1>
 
-            <a href="" class="splash__btn">
+            <a href="#" class="splash__btn">
 
             </a>
         </div>
 
         <div class="experience">
-            <ul class="menu">
-                <li class="menu__item">
-                    <a href="#" class="menu__link">
-                        Consistent
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">
-                        Customer oriented
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">
-                        Innovative
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">
-                        Business oriented
-                    </a>
-                </li>
-            </ul>
-
             <div class="experience__block">
-                <p class="experience__heading">
+                <input type="radio" id="experience-one" name="experience-group" class="experience__toggle">
+                <label for="experience-one" class="experience__heading">
                     We turn the idea of legal services
-                </p>
-                <p class="experience__text">
+                </label> 
+                <p class="experience__content">
                     Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
                 </p>
             </div>
@@ -134,8 +126,8 @@
             </p>
             
             <div class="services__block">
-                <div class="icon">
-                    <img src="" alt="" class="icon__img">
+                <div class="services__icon">
+                    <img src="" alt="" class="services__img">
                 </div>
                 <p class="services__title">
                     IT and e-commerce
@@ -146,8 +138,8 @@
             </div>
             
             <div class="services__block">
-                <div class="icon">
-                    <img src="" alt="" class="icon__img">
+                <div class="services__icon">
+                    <img src="" alt="" class="services__img">
                 </div>
                 <p class="services__title">
                     Comprehensive daily legal support
@@ -158,8 +150,8 @@
             </div>
             
             <div class="services__block">
-                <div class="icon">
-                    <img src="" alt="" class="icon__img">
+                <div class="services__icon">
+                    <img src="" alt="" class="services__img">
                 </div>
                 <p class="services__title">
                     Structuring corporate relationships
@@ -170,8 +162,8 @@
             </div>
             
             <div class="services__block">
-                <div class="icon">
-                    <img src="" alt="" class="icon__img">
+                <div class="services__icon">
+                    <img src="" alt="" class="services__img">
                 </div>
                 <p class="services__title">
                     Building contractual relations
@@ -182,8 +174,8 @@
             </div>
             
             <div class="services__block">
-                <div class="icon">
-                    <img src="" alt="" class="icon__img">
+                <div class="services__icon">
+                    <img src="" alt="" class="services__img">
                 </div>
                 <p class="services__title">
                     Protection of business, intellectual property
@@ -194,8 +186,8 @@
             </div>
             
             <div class="services__block">
-                <div class="icon">
-                    <img src="" alt="" class="icon__img">
+                <div class="services__icon">
+                    <img src="" alt="" class="services__img">
                 </div>
                 <p class="services__title">
                     Judicial representation

@@ -1,4 +1,4 @@
-// Colors variables
+// Variables
 $main-regular: #323264;
 $main-alt: #46466E;
 $main-soft: #686887;
@@ -9,11 +9,13 @@ $active-regular: #24A3FF;
 $active-hover: #0085FF;
 $active-active: #006CCF;
 
+$color-light: #FFFFFF;
 $color-bg: #F5F5FA;
 $color-bg-alt: #EDEDF7;
 $color-text: #B3B3BA;
 $color-separator: #E6E6F0;
 
+//Extensions
 %gradient-regular {
     background: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
 }
@@ -42,7 +44,19 @@ $color-separator: #E6E6F0;
  
   @font-face {
     font-family: 'Montserrat';
-    src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+    src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
     font-weight: 600;
   }
+
+//Mixins
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+
+
   
