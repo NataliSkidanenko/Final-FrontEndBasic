@@ -104,12 +104,45 @@
         </div>
 
         <div class="experience">
-            <div class="experience__block">
-                <input type="radio" id="experience-one" name="experience-group" class="experience__toggle">
-                <label for="experience-one" class="experience__heading">
+            <div class="tab">
+                <button class="tab__links" onclick="openTabs(event, 'consistent')">Consistent</button>
+                <button class="tab__links" onclick="openTabs(event, 'customer-oriented')">Customer oriented</button>
+                <button class="tab__links" onclick="openTabs(event, 'innovative')">Innovative</button>
+                <button class="tab__links" onclick="openTabs(event, 'business-oriented')">Business oriented</button>
+              </div>
+              
+            <div class="experience__block" id="consistent">
+                <p class="experience__title">
                     We turn the idea of legal services
-                </label> 
-                <p class="experience__content">
+                </p>
+                <p class="experience__text">
+                    Consolidating many years of experience and practdecisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
+                </p>
+            </div>
+            
+            <div class="experience__block" id="customer-oriented">
+                <p class="experience__title">
+                    We turn the idea of legal services
+                </p>
+                <p class="experience__text">
+                    Consolidating many yearse industry. Many of them form the practice of applying the law of the sea in Ukraine.
+                </p>
+            </div>
+            
+            <div class="experience__block" id="innovative">
+                <p class="experience__title">
+                    We turn the idea of legal services
+                </p>
+                <p class="experience__text">
+                    Consolidating many years of expeojects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
+                </p>
+            </div>
+            
+            <div class="experience__block" id="business-oriented">
+                <p class="experience__title">
+                    We turn the idea of legal services
+                </p>
+                <p class="experience__text">
                     Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
                 </p>
             </div>
@@ -343,5 +376,7 @@
             </div>
         </footer>
     </div>
+
+    <script src="js/tabs.js"></script>
 </body>
 </html>

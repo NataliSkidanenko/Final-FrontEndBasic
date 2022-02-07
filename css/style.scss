@@ -200,12 +200,31 @@ body {
 }
 
 .experience {
-    
-    &__block {
 
-        &&__toggle {
-            font-size: 12px;
+    .tab {
+        @include flex(row, space-between, center);
+        overflow-x: scroll;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+
+        &__links {
+            width: auto;
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
         }
+    }
+
+    &__block {
+        display: none;
+    }
+    
+    #consistent {
+        display: block;
     }
 }
 
