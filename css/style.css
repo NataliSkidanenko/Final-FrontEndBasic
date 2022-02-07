@@ -137,14 +137,14 @@ body {
           transform: translate(-50%, 0);
 }
 
-.main::after::after {
+.main__shadow {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: -30px;
-  width: 89.33333%;
+  bottom: -20px;
+  width: 78.66667%;
   height: 10px;
-  background-color: #dfdfe7;
+  background-color: #EDEDF7;
   border-radius: 0 0 12px 12px;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);

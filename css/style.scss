@@ -26,18 +26,18 @@ body {
         background-color: #CACADB;
         border-radius: 0 0 12px 12px;
         transform: translate(-50%, 0);
+    }
 
-        &::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -30px;
-            width: 335px/375px *100%;
-            height: $size/3;
-            background-color: #dfdfe7;
-            border-radius: 0 0 12px 12px;
-            transform: translate(-50%, 0);
-        }
+    &__shadow {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        width: 295px/375px *100%;
+        height: $size/3;
+        background-color: $color-bg-alt;
+        border-radius: 0 0 12px 12px;
+        transform: translate(-50%, 0);
     }
 }
 
