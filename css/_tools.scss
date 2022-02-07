@@ -1,4 +1,6 @@
 // Variables
+$size: 30px;
+
 $main-regular: #323264;
 $main-alt: #46466E;
 $main-soft: #686887;
@@ -17,24 +19,48 @@ $color-separator: #E6E6F0;
 
 //Extensions
 %gradient-regular {
-    background: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+    background-image: linear-gradient(128.63deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
 }
 
 %gradient-soft {
-    background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+    background-image: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
 }
 
 %gradient-red {
-    background: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%);
+    background-image: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%);
 }
 
 %gradient-supersoft {
-    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
 
 %gradient-text {
-    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    background-image: linear-gradient(90.13deg, #EF8080 0.84%,  #F0145A 99.96%);
 }
+
+%link-subheading {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+%heading {
+    font-size: 30px;
+    line-height: 36.57px;
+    font-weight: bold;
+    color: $accent;
+    @extend %gradient-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+%title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 26.82px;
+    color: $active-regular;
+}
+
 
 //Fonts
 @font-face {
