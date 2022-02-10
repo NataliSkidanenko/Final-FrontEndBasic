@@ -9,6 +9,40 @@
     <title>Hlegal — Homepage</title>
 </head>
 <body>
+    <div id="navModal" class="modal">
+        <div class="modal__content">
+            <div class="modal__header">
+              <span class="close"></span>
+            </div>
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        about us
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        services
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        team
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        news
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        contacts
+                    </a>
+                </li>
+            </ul>
+          </div>
+    </div>
     <div class="main">
 
         <div class="splash">
@@ -59,58 +93,20 @@
                             <img src="img/general/logo-white.svg" alt="Logo Hlegal" class="logo__img">
                         </a>
                     </div>
-
-                    <div class="nav">
-                        <input id="nav__toggle" class="nav__toggle" type="checkbox">
-                        <label class="nav__btn" for="nav__toggle">
-                            <span></span>
-                        </label>
-                        <ul class="nav__box">
-                            <div class="close">
-                                <input id="nav__toggle" class="nav__toggle" type="checkbox">
-                                <label class="nav__btn" for="nav__toggle">
-                                    <span></span>
-                                </label>
-                            </div>
-                            <li class="nav__item">
-                                <a href="index.html" class="nav__link">
-                                    about us
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">
-                                    services
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">
-                                    team
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">
-                                    publications
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">
-                                    contact
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <button id="navButton" class="modal-btn"></button>
                 </div>
             </header>
+
             <h1 class="splash__heading">
                 you legal solutions provider
             </h1>
 
-            <a href="#" class="splash__btn">
+            <a href="#anchor" class="splash__btn">
 
             </a>
         </div>
 
-        <div class="experience">
+        <div class="experience" id="anchor">
             <div class="tab">
                 <button class="tab__links active" onclick="openTabs(event, 'consistent')">Consistent</button>
                 <button class="tab__links" onclick="openTabs(event, 'customer-oriented')">Customer oriented</button>
@@ -453,22 +449,27 @@
             </div>
         </footer>
     </div>
+
+    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/tabs.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/anchor.js"></script>
     <script>
-    $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-            loop:true,
-            nav:false,
-            margin:20,
-            responsive:{
-                0:{
-                items:1
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                nav:false,
+                margin:20,
+                responsive:{
+                    0:{
+                    items:1
+                    }
                 }
-            }
+            });
         });
-    });
     </script>
 </body>
 </html>

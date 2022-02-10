@@ -113,6 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: 'Montserrat', 'Helvetica', sans-serif;
+  position: relative;
 }
 
 .container {
@@ -125,6 +126,92 @@ body {
 
 .link {
   color: #24A3FF;
+}
+
+.modal-btn {
+  width: 30px;
+  height: 30px;
+  background: url(../img/general/hamburger.svg) center center no-repeat;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 100, 0.7);
+  z-index: 99;
+  overflow: hidden;
+}
+
+.modal__content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 95%;
+  margin: 0 auto;
+  padding: 60px 10px 10px 10px;
+  background-color: #FFFFFF;
+  border-radius: 12px 12px 0 0;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-animation-name: modal;
+          animation-name: modal;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+.modal .nav__item {
+  text-align: center;
+}
+
+.modal .nav__item:not(:first-child) {
+  margin-top: 12px;
+}
+
+.modal .nav__link {
+  display: block;
+  padding: 7.5px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #24A3FF;
+  background-color: #F5F5FA;
+  border-radius: 12px;
+}
+
+.modal .nav__link.active {
+  color: #F0145A;
+}
+
+.modal .nav__link:active {
+  background-color: #E6E6F0;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.close::before, .close::after {
+  position: absolute;
+  left: 9px;
+  content: ' ';
+  height: 18px;
+  width: 2px;
+  background-color: #EC6F5D;
+}
+
+.close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .main {
@@ -248,118 +335,8 @@ body {
   width: 70px;
 }
 
-.header__block .nav {
-  position: absolute;
-  width: 18px;
-  top: 28%;
-  right: 15px;
-}
-
-.header__block .nav__toggle {
-  opacity: 0;
-}
-
-.header__block .nav__toggle:checked ~ .nav__btn > span {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.header__block .nav__toggle:checked ~ .nav__btn > span::before {
-  top: 0;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
-
-.header__block .nav__toggle:checked ~ .nav__btn > span::after {
-  top: 0;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.header__block .nav__toggle:checked ~ .nav__box {
-  visibility: visible;
-  bottom: -1px;
-}
-
-.header__block .nav__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.header__block .nav__btn > span,
-.header__block .nav__btn > span::before,
-.header__block .nav__btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #FFFFFF;
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-}
-
-.header__block .nav__btn > span::before {
-  content: '';
-  top: -6px;
-}
-
-.header__block .nav__btn > span::after {
-  content: '';
-  top: 6px;
-}
-
-.header__block .nav__box {
-  display: block;
-  position: fixed;
-  visibility: hidden;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding: 12px 8px;
-  background-color: #FFFFFF;
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-}
-
-.header__block .nav__item {
-  display: block;
-  text-align: center;
-  margin-top: 15px;
-  background-color: #F5F5FA;
-  border-radius: 12px;
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-}
-
-.header__block .nav__link {
-  display: block;
-  padding: 10px 15px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #24A3FF;
-}
-
-.header__block .nav__link:active {
-  color: #F0145A;
+.header .nav {
+  display: none;
 }
 
 .splash {
@@ -735,5 +712,27 @@ body {
 .footer__text {
   margin-top: 30px;
   color: #B3B3BA;
+}
+
+@-webkit-keyframes modal {
+  from {
+    opacity: 0;
+    bottom: -150%;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    bottom: -150%;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
