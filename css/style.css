@@ -72,18 +72,19 @@ h1, h2, h3, h4, h5, h6 {
   background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
 
-.services__heading, .team__title, .experience .tab__links.active {
+.services__heading, .team__title, .news__heading, .experience .tab__links.active {
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
 }
 
-.services__subheading, .team__link {
+.services__subheading, .team__link, .news__subheading, .footer .contacts__item .link {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   color: #24A3FF;
 }
 
-.services__heading, .team__title {
+.services__heading, .team__title, .news__heading {
+  margin-top: 10px;
   font-size: 30px;
   line-height: 36.57px;
   font-weight: bold;
@@ -116,6 +117,14 @@ body {
 
 .container {
   padding: 0 30px;
+}
+
+.container--bg {
+  background-color: #F5F5FA;
+}
+
+.link {
+  color: #24A3FF;
 }
 
 .main {
@@ -463,10 +472,6 @@ body {
   color: #24A3FF;
 }
 
-.services__heading {
-  margin-top: 10px;
-}
-
 .services__block {
   margin-top: 30px;
 }
@@ -548,18 +553,18 @@ body {
   overflow: hidden;
 }
 
-.team__img {
+.team .img__wrap {
+  width: 100%;
   height: 500px;
 }
 
-.team__img--oleksandrovsky {
-  background: url(../img/team/photo-alexandrovsky.png) center center no-repeat;
-  background-size: cover;
-}
-
-.team__img--kobzar {
-  background: url(../img/team//photo-kobzar.png) center center no-repeat;
-  background-size: cover;
+.team .img__wrap .img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .team__description {
@@ -567,7 +572,7 @@ body {
 }
 
 .team__title {
-  margin: 10px 0 30px 0;
+  margin-bottom: 30px;
 }
 
 .team__text {
@@ -580,7 +585,7 @@ body {
 }
 
 .clients {
-  padding: 30px 0;
+  padding-top: 30px;
   text-align: center;
 }
 
@@ -629,5 +634,106 @@ body {
 
 .clients__item--clickky, .clients__item--ecoleasing, .clients__item--infratek, .clients__item--citypark, .clients__item--artprint, .clients__item--ultimate {
   display: none;
+}
+
+.news {
+  padding: 30px 0;
+  background-color: #F5F5FA;
+  border-radius: 12px;
+}
+
+.news__heading {
+  margin-bottom: 30px;
+}
+
+.news__block {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.news__block:not(:first-child) {
+  margin-top: 30px;
+}
+
+.news .img__wrap {
+  width: 100%;
+  height: 200px;
+}
+
+.news .img__wrap .img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.news__info {
+  padding: 30px;
+}
+
+.news__title {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #24A3FF;
+}
+
+.news__subtitle {
+  margin-bottom: 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #B3B3BA;
+  text-transform: uppercase;
+}
+
+.news__text {
+  padding-top: 15px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: #000000;
+  border-top: 4px solid #E6E6F0;
+}
+
+.footer {
+  padding: 30px 0;
+  text-align: center;
+  border-top: 2px solid #E6E6F0;
+}
+
+.footer .contacts:not(:first-child) {
+  margin-top: 22.5px;
+}
+
+.footer .contacts__item:not(:first-child) {
+  margin-top: 15px;
+}
+
+.footer .contacts__item .link {
+  font-size: 0.75rem;
+}
+
+.footer .contacts__item .phone {
+  font-weight: bold;
+  color: #46466E;
+}
+
+.footer .contacts__item .mail {
+  font-weight: bold;
+  color: #24A3FF;
+}
+
+.footer .contacts__vec path {
+  fill: #24A3FF;
+}
+
+.footer .contacts__vec:hover path {
+  fill: #F0145A;
+}
+
+.footer__text {
+  margin-top: 30px;
+  color: #B3B3BA;
 }
 /*# sourceMappingURL=style.css.map */

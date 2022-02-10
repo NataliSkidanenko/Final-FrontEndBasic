@@ -47,7 +47,7 @@
                             <a href="#" class="contacts__link">
                                 <svg class="contacts__vec" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="white"/>
-                                    </svg>                                    
+                                </svg>                                    
                             </a>
                         </li>
                     </ul>
@@ -245,7 +245,9 @@
     <div class="container">
         <div class="team owl-carousel">
             <div class="team__block">
-                <div class="team__img team__img--oleksandrovsky"></div>
+                <div class="img__wrap">
+                    <img class="img" src="img/team/photo-alexandrovsky.png" alt="vertical" />
+                </div>
                 <div class="team__description">
                     <p class="team__subtitle">
                         <a href="#" class="team__link">
@@ -267,7 +269,9 @@
                 </div>
             </div>
             <div class="team__block">
-                <div class="team__img team__img--kobzar"></div>
+                <div class="img__wrap">
+                    <img class="img" src="img/team/photo-alexandrovsky.png" alt="vertical" />
+                </div>
                 <div class="team__description">
                     <p class="team__subtitle">
                         <a href="#" class="team__link">
@@ -289,7 +293,9 @@
                 </div>
             </div>
             <div class="team__block">
-                <div class="team__img team__img--oleksandrovsky"></div>
+                <div class="img__wrap">
+                    <img class="img" src="img/team/photo-alexandrovsky.png" alt="vertical" />
+                </div>
                 <div class="team__description">
                     <p class="team__subtitle">
                         <a href="#" class="team__link">
@@ -334,20 +340,24 @@
         </ul>
     </div>
 
-    <div class="container">
+    <div class="container container--bg">
         <div class="news">
-            <p class="news__subheading">
-                <a href="#" class="news__link link">
-                    Publications
-                </a>
-            </p>
+            <a href="#" class="news__subheading">
+                Publications
+                <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
+                </svg> 
+            </a>
             <p class="news__heading">
-                We have something to tell
+                We have
+                <br>something to tell
             </p>
             
             <div class="news__block">
                 <a href="#" class="news__link">
-                    <img src="" alt="" class="news__img">
+                    <div class="img__wrap">
+                        <img class="img" src="img/news/news-1.jpg" alt="vertical" />
+                      </div>
                     <div class="news__info">
                         <p class="news__title">
                             Equity associate
@@ -355,16 +365,18 @@
                         <p class="news__subtitle">
                             April 22
                         </p>
+                        <p class="news__text">
+                            I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told me that if I…
+                        </p>
                     </div>
-                    <p class="news__text">
-
-                    </p>
                 </a>
             </div>
             
             <div class="news__block">
                 <a href="#" class="news__link">
-                    <img src="" alt="" class="news__img">
+                    <div class="img__wrap">
+                        <img class="img" src="img/news/news-2.jpg" alt="" />
+                      </div>
                     <div class="news__info">
                         <p class="news__title">
                             Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR
@@ -372,16 +384,18 @@
                         <p class="news__subtitle">
                             September 29
                         </p>
+                        <p class="news__text">
+                            And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
+                        </p>
                     </div>
-                    <p class="news__text">
-                        And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
-                    </p>
                 </a>
             </div>
             
             <div class="news__block">
                 <a href="#" class="news__link">
-                    <img src="" alt="" class="news__img">
+                    <div class="img__wrap">
+                        <img class="img" src="img/news/news-3.jpg" alt="" />
+                      </div>
                     <div class="news__info">
                         <p class="news__title">
                             Millennial Testament
@@ -389,52 +403,56 @@
                         <p class="news__subtitle">
                             August 19
                         </p>
+                        <p class="news__text">
+                            What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…
+                        </p>
                     </div>
-                    <p class="news__text">
-                        What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…
-                    </p>
                 </a>
             </div>
 
         </div>  
     </div>
-    <footer class="footer">
-        <div class="footer__block">
-            <ul class="contacts">
-                <li class="contacts__item">
-                    Kyiv, Mechnikova str, 14/1
-                </li>
-                <li class="contacts__item">
-                    <a href="#" class="contacts__link link">
-                        On map
-                    </a>
-                </li>
-            </ul>
-            <ul class="contacts">
-                <li class="contacts__item">
-                    <a href="#" class="contacts__link social">
-                        <img src="" alt="" class="contacts__img">
-                    </a>
-                </li>
-                <li class="contacts__item">
-                    <a href="tel:0800211927" class="contacts__link phone">
-                        0800 211 927
-                    </a>
-                </li>
-                <li class="contacts__item">
-                    <a href="mailto:0800211927" class="contacts__link mail">
-                        contact@forstudy.space
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer__block">
-            <p class="footer__text">
-                © 2021 HLEGAL Law company, LLC
-            </p>
-        </div>
-    </footer>
 
+    <div class="container container--bg">
+        <footer class="footer">
+            <div class="footer__block">
+                <ul class="contacts">
+                    <li class="contacts__item">
+                        Kyiv, Mechnikova str, 14/1
+                    </li>
+                    <li class="contacts__item">
+                        <a href="#" class="contacts__link link">
+                            On map
+                        </a>
+                    </li>
+                </ul>
+                <ul class="contacts">
+                    <li class="contacts__item">
+                        <a href="#" class="contacts__link social">
+                            <svg class="contacts__vec" width="38" height="38" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="white"/>
+                            </svg> 
+                        </a>
+                    </li>
+                    <li class="contacts__item">
+                        <a href="tel:0800211927" class="contacts__link phone">
+                            0800 211 927
+                        </a>
+                    </li>
+                    <li class="contacts__item">
+                        <a href="mailto:0800211927" class="contacts__link mail">
+                            contact@forstudy.space
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__block">
+                <p class="footer__text">
+                    © 2021 HLEGAL Law company, LLC
+                </p>
+            </div>
+        </footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/tabs.js"></script>
