@@ -10,8 +10,9 @@ body {
 }
 
 .main {
-    position: relative;
     @extend %gradient-supersoft;
+    position: relative;
+    margin-bottom: 20px;
     padding-bottom: $size*2;
     color: $color-light;
     border-radius: 0 0 12px 12px;
@@ -316,6 +317,105 @@ body {
         line-height: 26px/16px *1rem;
     }
 }
+
+
+
+.owl-dots {
+    @include flex(row, center, center);
+    margin-top: $size;
+    .owl-dot {
+        display: inline-block;
+        zoom: 1;
+
+        span {
+            width: 16px;
+            height: 16px;
+            margin: 5px 7px;
+            background-color: rgba($active-regular, .2);
+            display: block;
+            backface-visibility: visible;
+            transition: opacity .2s ease;
+            border-radius: 30px;
+        }
+
+        &.active {
+
+            span {
+                background-color: $active-regular;
+            }
+        }
+    }
+}
+
+.team {
+    padding: $size 0;
+
+    &__block {
+        background-color: $color-bg;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    &__img {
+        height: 500px;
+
+        &--oleksandrovsky {
+            background: url(../img/team/photo-alexandrovsky.png) center center no-repeat;
+            background-size: cover;
+        }
+        
+        &--kobzar {
+            background: url(../img/team//photo-kobzar.png) center center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__description {
+        padding: $size; 
+    }
+
+    &__link {
+        @extend %link-subheading;
+    }
+
+    &__title {
+        @extend %heading;
+        margin: $size/3 0 $size 0;
+    }
+
+    &__text {
+        color: $color-text;
+
+        &--important {
+            font-weight: bold;
+            margin-bottom: $size/5;
+        }
+    }
+}
+
+.clients {
+    padding: $size 0;
+    text-align: center;
+
+    &__heading {
+        margin-bottom: $size;
+        font-size: 14px/16px *1rem;
+        font-weight: bold;
+        color: $main-regular;
+        text-transform: uppercase;
+    }
+    
+    &__item {
+        width: 100%;
+        height: $size*4;
+
+        &--hillel {
+            background: #1C4280 url(../img/clients/hillel.png) center center no-repeat;
+            background-size: 60%;
+        }
+    }
+}
+
 
 
 // &--social {

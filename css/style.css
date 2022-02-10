@@ -72,17 +72,18 @@ h1, h2, h3, h4, h5, h6 {
   background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
 
-.services__heading, .experience .tab__links.active {
-  background-image: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+.services__heading, .team__title, .experience .tab__links.active {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
 }
 
-.services__subheading {
+.services__subheading, .team__link {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+  color: #24A3FF;
 }
 
-.services__heading {
+.services__heading, .team__title {
   font-size: 30px;
   line-height: 36.57px;
   font-weight: bold;
@@ -119,6 +120,7 @@ body {
 
 .main {
   position: relative;
+  margin-bottom: 20px;
   padding-bottom: 60px;
   color: #FFFFFF;
   border-radius: 0 0 12px 12px;
@@ -495,5 +497,108 @@ body {
 
 .services__text {
   line-height: 1.625rem;
+}
+
+.owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+}
+
+.owl-dots .owl-dot span {
+  width: 16px;
+  height: 16px;
+  margin: 5px 7px;
+  background-color: rgba(36, 163, 255, 0.2);
+  display: block;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+
+.owl-dots .owl-dot.active span {
+  background-color: #24A3FF;
+}
+
+.team {
+  padding: 30px 0;
+}
+
+.team__block {
+  background-color: #F5F5FA;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.team__img {
+  height: 500px;
+}
+
+.team__img--oleksandrovsky {
+  background: url(../img/team/photo-alexandrovsky.png) center center no-repeat;
+  background-size: cover;
+}
+
+.team__img--kobzar {
+  background: url(../img/team//photo-kobzar.png) center center no-repeat;
+  background-size: cover;
+}
+
+.team__description {
+  padding: 30px;
+}
+
+.team__title {
+  margin: 10px 0 30px 0;
+}
+
+.team__text {
+  color: #B3B3BA;
+}
+
+.team__text--important {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.clients {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.clients__heading {
+  margin-bottom: 30px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #323264;
+  text-transform: uppercase;
+}
+
+.clients__item {
+  width: 100%;
+  height: 120px;
+}
+
+.clients__item--hillel {
+  background: #1C4280 url(../img/clients/hillel.png) center center no-repeat;
+  background-size: 60%;
 }
 /*# sourceMappingURL=style.css.map */
