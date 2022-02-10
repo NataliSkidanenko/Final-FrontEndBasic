@@ -49,6 +49,10 @@ body {
 
     .nav {
 
+        &--tablet {
+            display: none;
+        }
+
         &__item {
             text-align: center;
 
@@ -149,6 +153,10 @@ body {
         color: #fff;
     }
 
+    .container {
+        padding: 0;
+    }
+
     &__block {
         @include flex(row, space-between, center);
         padding: $size/3 $size/2;
@@ -187,6 +195,10 @@ body {
                 &--phone {
                     font-weight: bold;
                 }
+            }
+
+            .dot {
+                display: none;
             }
         }
 
@@ -254,6 +266,7 @@ body {
 
             &.active {
                 @extend %gradient-text;
+                background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -571,5 +584,86 @@ body {
     to {
         opacity:1;
         bottom: 0;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .container {
+        padding: 0 $size*2;  
+    }
+
+    .splash {
+        background-size: 117%;
+    }
+
+    .modal-btn {
+        display: none;
+    }
+
+    .header {
+        padding: $size*2 0 0 0;
+
+        .container {
+            padding: 0 $size*2;  
+        }
+
+        &__block {
+            justify-content: left;
+            padding: $size/3 0;
+            
+            &--bg {
+                background: none;
+            }
+
+            &--column {
+                @include flex(column, flex-start, flex-start);
+            }
+        }
+
+        .logo {
+            margin: $size/2 0 $size 0;
+
+            &__img {
+                width: 130px;
+            }
+        }
+
+        .contacts {
+            @include flex(row, center, center);
+            
+            &__item {
+                @include flex(row, center, center);
+
+                &--desktop {
+                    display: block;
+                }
+            }
+
+            &__link {
+
+                &.address {
+                    color: $color-text;
+                }
+
+                &.phone {
+                    font-weight: bold;
+                }
+            }
+
+            .dot {
+                display: block;
+                margin: 0 $size/5;
+            }
+        }
+
+        .nav {
+            &--tablet {
+                display: block;
+                @include flex(row, flex-start, center);
+                width: 100%;
+            }
+            
+        }
     }
 }
