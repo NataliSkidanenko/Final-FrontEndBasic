@@ -601,4 +601,33 @@ body {
   background: #1C4280 url(../img/clients/hillel.png) center center no-repeat;
   background-size: 60%;
 }
+
+.clients__item--wannab {
+  background: #143646 url(../img/clients/wannabiz.png) center center no-repeat;
+  background-size: 56%;
+}
+
+.clients__item--tapgerine {
+  background: #F48B30 url(../img/clients/tapgerine.png) center center no-repeat;
+  background-size: 51%;
+}
+
+.clients__item--3dlook {
+  background: #9E4DC3 url(../img/clients/3dlook.png) center center no-repeat;
+  background-size: 51%;
+}
+
+.clients__item--orangegear {
+  background: #FD9339 url(../img/clients/orangear.png) center center no-repeat;
+  background-size: 51%;
+}
+
+.clients__item--addtellige {
+  background: #E2E2E4 url(../img/clients/adtelligent.png) center center no-repeat;
+  background-size: 53%;
+}
+
+.clients__item--clickky, .clients__item--ecoleasing, .clients__item--infratek, .clients__item--citypark, .clients__item--artprint, .clients__item--ultimate {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */

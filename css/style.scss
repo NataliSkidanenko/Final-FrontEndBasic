@@ -413,6 +413,41 @@ body {
             background: #1C4280 url(../img/clients/hillel.png) center center no-repeat;
             background-size: 60%;
         }
+        
+        &--wannab {
+            background: #143646 url(../img/clients/wannabiz.png) center center no-repeat;
+            background-size: 56%;
+        }
+        
+        &--tapgerine {
+            background:#F48B30 url(../img/clients/tapgerine.png) center center no-repeat;
+            background-size: 51%;
+        }
+        
+        &--3dlook {
+            background:#9E4DC3 url(../img/clients/3dlook.png) center center no-repeat;
+            background-size: 51%;
+        }
+       
+        &--orangegear {
+            background:#FD9339 url(../img/clients/orangear.png) center center no-repeat;
+            background-size: 51%;
+        }
+
+        &--addtellige {
+            background:#E2E2E4 url(../img/clients/adtelligent.png) center center no-repeat;
+            background-size: 53%;
+        }
+
+        &--clickky,
+        &--ecoleasing, 
+        &--infratek,
+        &--citypark,
+        &--artprint,
+        &--ultimate {
+            display: none;
+        }
+
     }
 }
 
