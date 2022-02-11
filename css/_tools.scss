@@ -65,7 +65,6 @@ $color-separator: #E6E6F0;
     color: $active-regular;
 }
 
-
 //Fonts
 @font-face {
     font-family: 'Montserrat';
@@ -84,6 +83,7 @@ $color-separator: #E6E6F0;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+    flex-wrap: wrap;
 }
 
 

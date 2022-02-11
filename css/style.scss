@@ -196,10 +196,6 @@ body {
                     font-weight: bold;
                 }
             }
-
-            .dot {
-                display: none;
-            }
         }
 
         .logo {
@@ -215,12 +211,16 @@ body {
     }
 }
 
+.dot {
+    display: none;
+}
+
 .splash {
     @include flex(row, center, center);
     position: relative;
     height: 100vh;
     background: url(../img/general/symbol.svg) no-repeat center center;
-    background-size: 140%;
+    background-size: auto 100vh;
 
     &__heading {
         width: 315px/375px *100%;
@@ -242,10 +242,12 @@ body {
     
 }
 
+
 .experience {
 
     .tab {
         @include flex(row, space-between, center);
+        flex-wrap: nowrap;
         padding: $size 0 $size/3 $size;
         overflow-x: scroll;
 
@@ -298,8 +300,7 @@ body {
 }
 
 .services {
-    margin-top: 10%;
-    padding: 0 $size;
+    margin-top: $size;
 
     &__subheading {
         @extend %link-subheading;
@@ -324,15 +325,13 @@ body {
 
     &__title {
         @extend %title;
-        margin-top: $size;
+        margin: $size 0 $size/2 0;
     }
 
     &__text {
         line-height: 26px/16px *1rem;
     }
 }
-
-
 
 .owl-dots {
     @include flex(row, center, center);
@@ -593,8 +592,260 @@ body {
         padding: 0 $size*2;  
     }
 
+    
+
+    .modal-btn {
+        display: none;
+    }
+
+    .header {
+        padding: $size*2 0 0 0;
+
+        .container {
+            padding: 0 $size*2;  
+        }
+
+        &__block {
+            justify-content: left;
+            padding: $size/3 0;
+            
+            &--bg {
+                background: none;
+            }
+
+            &--column {
+                @include flex(column, flex-start, flex-start);
+            }
+        }
+
+        .logo {
+            margin: $size/2 0 $size 0;
+
+            &__img {
+                width: 130px;
+            }
+        }
+
+        .contacts {
+            @include flex(row, center, center);
+            
+            &__item {
+                @include flex(row, center, center);
+
+                &--desktop {
+                    display: block;
+                }
+            }
+
+            &__link {
+
+                &.address {
+                    color: $color-text;
+                }
+
+                &.phone {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .nav {
+            &--tablet {
+                display: block;
+                @include flex(row, flex-start, center);
+                width: 100%;
+            }
+            
+            &__item {
+                font-weight: bold;
+                padding-right: $size/2;
+            }
+        }
+    }
+
+    .dot {
+        display: block;
+        margin: 0 $size/5;
+    }
+
+    .experience {
+
+        .tab {
+            padding: $size*2 0 $size $size*2;
+    
+            &__links {
+                font-size: 38px/16px *1rem;
+            }
+        }
+    
+        &__block {
+            margin: 0 $size*2;
+            padding-top: $size*2;
+        }
+    
+        &__title {
+            font-size: 30px/16px *1rem;
+            line-height: 36.57px/16px *1rem;
+        }
+    }
+
+    .services {
+        margin-top: $size*2;
+
+        &__heading {
+            font-size: 38px/16px *1rem;
+        }
+
+        &__wrapper {
+            @include flex(row, space-between, flex-start);
+        } 
+    
+        &__block {
+            margin-top: $size*2;
+            width: 45%;
+        }
+    }
+
+    .team {
+        padding: $size*2 0;
+    
+        &__title {
+            font-size: 38px/16px *1rem;
+        }
+    }
+
+    .clients {
+        padding-top: 0;
+
+        &__list {
+            @include flex(row, center, center);
+        }
+        
+        &__item {
+            width: 100/3 *1%;
+            height: $size*4;
+    
+            &--hillel,
+            &--wannab {
+                background-size: 80%;
+            }
+        
+            &--tapgerine,
+            &--3dlook,
+            &--orangegear,
+            &--addtellige,
+            &--infratek {
+                background-size: 70%;
+            }
+    
+            &--clickky,
+            &--ecoleasing, 
+            &--infratek,
+            &--citypark,
+            &--artprint,
+            &--ultimate {
+                display: block;
+            }
+            
+            &--clickky {
+                background: #C71C36 url(../img/clients/clickky.png) center center no-repeat;
+                background-size: 60%;
+            }
+            
+            &--ecoleasing {
+                background: #DCF3F9 url(../img/clients/eco-leasing.png) center center no-repeat;
+                background-size: 65%;
+            }
+            
+            &--infratek {
+                background: #EAEAEA url(../img/clients/ingratek.png) center center no-repeat;
+                background-size: 75%;
+            }
+            
+            &--citypark {
+                background: #282240 url(../img/clients/city-par.png) center center no-repeat;
+                background-size: 75%;
+            }
+            
+            &--artprint {
+                background: #1D4568 url(../img/clients/artprint.png) center center no-repeat;
+                background-size: 75%;
+            }
+            
+            &--ultimate {
+                background: #000000 url(../img/clients/ultimatecard.png) center center no-repeat;
+                background-size: 60%;
+            }
+        }
+    }
+
+    .news {
+    
+        &__heading {
+            font-size: 38px/16px*1rem;
+
+            br {
+                display: none;
+            }
+        }
+        
+        &__wrapper {
+            @include flex(row, space-between, stretch);
+        }
+
+        &__block {
+            width: 47.5%;
+    
+            &:not(:first-child) {
+                margin-top: 0;
+            }
+
+            &--full {
+                width: 100%;
+                margin-top: $size!important;
+            }
+        }
+    }
+
+    .footer {
+        position: relative;
+        text-align: left;
+    
+        .contacts {
+            @include flex(row, flex-start, center);
+
+            &:not(:first-child) {
+                margin-top: $size*0.75;
+            }
+    
+            &__item {
+    
+                &:not(:first-child) {
+                    margin-top: 0;
+                }
+            }
+        }   
+    
+        &__text {
+            margin-top: $size;
+            color: $color-text;
+        }
+
+        &__block {
+            &--position {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
     .splash {
-        background-size: 117%;
+        background-size: 100vh;
     }
 
     .modal-btn {
@@ -650,11 +901,6 @@ body {
                     font-weight: bold;
                 }
             }
-
-            .dot {
-                display: block;
-                margin: 0 $size/5;
-            }
         }
 
         .nav {
@@ -664,6 +910,188 @@ body {
                 width: 100%;
             }
             
+            &__item {
+                font-weight: bold;
+                padding-right: $size/2;
+            }
         }
     }
+
+    .dot {
+        display: block;
+        margin: 0 $size/5;
+    }
+
+    .experience {
+
+        .tab {
+            padding: $size*2 0 $size $size*2;
+    
+            &__links {
+                font-size: 38px/16px *1rem;
+            }
+        }
+    
+        &__block {
+            margin: 0 $size*2;
+            padding-top: $size*2;
+        }
+    
+        &__title {
+            font-size: 30px/16px *1rem;
+            line-height: 36.57px/16px *1rem;
+        }
+    }
+
+    .services {
+        margin-top: $size*2;
+
+        &__heading {
+            font-size: 38px/16px *1rem;
+        }
+
+        &__wrapper {
+            @include flex(row, space-between, flex-start);
+        } 
+    
+        &__block {
+            margin-top: $size*2;
+            width: 45%;
+        }
+    }
+
+    .team {
+        padding: $size*2 0;
+    
+        &__title {
+            font-size: 38px/16px *1rem;
+        }
+    }
+
+    .clients {
+        padding-top: 0;
+
+        &__list {
+            @include flex(row, center, center);
+        }
+        
+        &__item {
+            width: 100/3 *1%;
+            height: $size*4;
+    
+            &--hillel,
+            &--wannab {
+                background-size: 80%;
+            }
+        
+            &--tapgerine,
+            &--3dlook,
+            &--orangegear,
+            &--addtellige,
+            &--infratek {
+                background-size: 70%;
+            }
+    
+            &--clickky,
+            &--ecoleasing, 
+            &--infratek,
+            &--citypark,
+            &--artprint,
+            &--ultimate {
+                display: block;
+            }
+            
+            &--clickky {
+                background: #C71C36 url(../img/clients/clickky.png) center center no-repeat;
+                background-size: 60%;
+            }
+            
+            &--ecoleasing {
+                background: #DCF3F9 url(../img/clients/eco-leasing.png) center center no-repeat;
+                background-size: 65%;
+            }
+            
+            &--infratek {
+                background: #EAEAEA url(../img/clients/ingratek.png) center center no-repeat;
+                background-size: 75%;
+            }
+            
+            &--citypark {
+                background: #282240 url(../img/clients/city-par.png) center center no-repeat;
+                background-size: 75%;
+            }
+            
+            &--artprint {
+                background: #1D4568 url(../img/clients/artprint.png) center center no-repeat;
+                background-size: 75%;
+            }
+            
+            &--ultimate {
+                background: #000000 url(../img/clients/ultimatecard.png) center center no-repeat;
+                background-size: 60%;
+            }
+        }
+    }
+
+    .news {
+    
+        &__heading {
+            font-size: 38px/16px*1rem;
+
+            br {
+                display: none;
+            }
+        }
+        
+        &__wrapper {
+            @include flex(row, space-between, stretch);
+        }
+
+        &__block {
+            width: 47.5%;
+    
+            &:not(:first-child) {
+                margin-top: 0;
+            }
+
+            &--full {
+                width: 100%;
+                margin-top: $size!important;
+            }
+        }
+    }
+
+    .footer {
+        position: relative;
+        text-align: left;
+    
+        .contacts {
+            @include flex(row, flex-start, center);
+
+            &:not(:first-child) {
+                margin-top: $size*0.75;
+            }
+    
+            &__item {
+    
+                &:not(:first-child) {
+                    margin-top: 0;
+                }
+            }
+        }   
+    
+        &__text {
+            margin-top: $size;
+            color: $color-text;
+        }
+
+        &__block {
+            &--position {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
 }
