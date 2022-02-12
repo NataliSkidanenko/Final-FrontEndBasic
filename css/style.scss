@@ -4,6 +4,7 @@
 body {
     font-family: 'Montserrat', 'Helvetica', sans-serif;
     position: relative;
+    transition: all .4s;
 }
 
 .container {
@@ -176,10 +177,16 @@ body {
                 height: 25px;
                 font-weight:bold;
                 text-transform: uppercase;
+                border-radius: 8px;
+                transition: all .3s;
 
                 &--active {
                     background-color: $accent;
-                    border-radius: 8px;
+                }
+
+                &__link {
+                    display: block;
+                    width: 100%;
                 }
             }
         }
@@ -231,13 +238,13 @@ body {
     }
 
     &__btn {
+        @include flex(row, center, center);
         position: absolute;
         bottom: 5%;
         width: 42px;
         height: 42px;
         border-radius: 50%;
         border: 2px solid rgba($color-light, .5);
-        background: url(../img/general/arrow-down.svg) no-repeat center center;
     }
     
 }
@@ -325,6 +332,7 @@ body {
 
     &__title {
         @extend %title;
+        display: block;
         margin: $size 0 $size/2 0;
     }
 
@@ -369,11 +377,11 @@ body {
         overflow: hidden;
     }
 
-    .img__wrap {
+    .thumb {
         width: 100%;
         height: 500px;
 
-        .img {
+        &__img {
             width: 100%;
             height: 100%;
             object-position: center;
@@ -385,7 +393,7 @@ body {
         padding: $size; 
     }
 
-    &__link {
+    &__subtitle {
         @extend %link-subheading;
     }
 
@@ -486,11 +494,11 @@ body {
         }
     }
 
-    .img__wrap {
+    .thumb {
             width: 100%;
             height: 200px;
 
-        .img {
+        &__img {
             width: 100%;
             height: 100%;
             object-position: center;
@@ -540,18 +548,25 @@ body {
             &:not(:first-child) {
                 margin-top: $size/2;
             }
+        }
 
-            .link {
+        &__link {
+
+            &--address {
+                color: $main-regular;
+            }
+
+            &--link {
                 @extend %link-subheading;
                 font-size: 12px/16px *1rem;
             }
 
-            .phone {
+            &--phone {
                 font-weight: bold;
                 color: $main-alt;
             }
 
-            .mail {
+            &--mail {
                 font-weight: bold;
                 color: $active-regular;
             }
@@ -561,10 +576,6 @@ body {
 
             path {
                 fill: $active-regular;
-            }
-        
-            &:hover path {
-                fill: $accent;
             }
         }
     }   
@@ -586,13 +597,23 @@ body {
     }
 }
 
+@keyframes splash {
+    0% {
+        background-size: auto 200vh
+    }
+    50% {
+        background-size: auto 100vh
+    }
+    100% {
+        background-size: auto 200vh
+    }
+}
+
 @media screen and (min-width:768px) {
 
     .container {
         padding: 0 $size*2;  
     }
-
-    
 
     .modal-btn {
         display: none;
@@ -606,7 +627,7 @@ body {
         }
 
         &__block {
-            justify-content: left;
+            justify-content: flex-start;
             padding: $size/3 0;
             
             &--bg {
@@ -639,11 +660,11 @@ body {
 
             &__link {
 
-                &.address {
+                &--address {
                     color: $color-text;
                 }
 
-                &.phone {
+                &--phone {
                     font-weight: bold;
                 }
             }
@@ -694,6 +715,7 @@ body {
 
         &__heading {
             font-size: 38px/16px *1rem;
+            line-height: 46.32px;
         }
 
         &__wrapper {
@@ -711,6 +733,7 @@ body {
     
         &__title {
             font-size: 38px/16px *1rem;
+            line-height: 46.32px;
         }
     }
 
@@ -723,8 +746,7 @@ body {
         
         &__item {
             width: 100/3 *1%;
-            height: $size*4;
-    
+
             &--hillel,
             &--wannab {
                 background-size: 80%;
@@ -782,7 +804,8 @@ body {
     .news {
     
         &__heading {
-            font-size: 38px/16px*1rem;
+            font-size: 2.375rem;
+            line-height: 46.32px;
 
             br {
                 display: none;
@@ -845,252 +868,292 @@ body {
 @media screen and (min-width:1024px) {
 
     .splash {
-        background-size: 100vh;
-    }
+        animation: splash 5s infinite;
 
-    .modal-btn {
-        display: none;
+        &__btn {
+            transition: all .4s;
+
+            path {
+                transition: all .4s;
+            }
+
+            &:hover {
+                border-color: rgba($accent, .5);
+            }
+
+            &:hover path {
+                stroke: $accent;
+            }
+        }
     }
 
     .header {
-        padding: $size*2 0 0 0;
 
         .container {
-            padding: 0 $size*2;  
+            position: relative;
         }
 
         &__block {
-            justify-content: left;
-            padding: $size/3 0;
-            
-            &--bg {
-                background: none;
-            }
+            justify-content: flex-end;
 
             &--column {
-                @include flex(column, flex-start, flex-start);
+                @include flex(row, flex-end, flex-start);
+            }
+        }
+
+        .language {
+
+            &__item {
+                transition: all .4s;
+
+                &:hover {
+                    background-color: rgba($color-light, .2);
+                }
+
+                &--active {
+                    &:hover {
+                        background-color: $accent;;
+                    }
+                }
             }
         }
 
         .logo {
-            margin: $size/2 0 $size 0;
-
-            &__img {
-                width: 130px;
-            }
+            position: absolute;
+            top: -$size;
+            left: 0;
+            margin: 0;
         }
 
-        .contacts {
-            @include flex(row, center, center);
-            
-            &__item {
-                @include flex(row, center, center);
+        .nav {
 
-                &--desktop {
-                    display: block;
+            &--tablet {
+                justify-content: flex-end;
+            }
+
+            &__item {
+                &:hover .nav__link::after {
+                    opacity: 1;
                 }
             }
 
             &__link {
+                position: relative;
+                transition: all .4s;
 
-                &.address {
-                    color: $color-text;
+                &::after {
+                    opacity: 0;
+                    content: '';
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $color-light;
+                    transition: all .4s;
+                    
                 }
 
-                &.phone {
-                    font-weight: bold;
+                &--active {
+                    color: $accent;
+
+                    &::after {
+                        background-color: $accent;
+                        
+                    }
                 }
             }
         }
 
-        .nav {
-            &--tablet {
-                display: block;
-                @include flex(row, flex-start, center);
-                width: 100%;
-            }
-            
-            &__item {
-                font-weight: bold;
-                padding-right: $size/2;
+        .contacts {
+            &__link {
+
+                &--address {
+                    color: $color-light;
+                }
+
+                &--social {
+
+                    path {
+                        transition: all .4s;
+                    }
+
+                    &:hover  path {
+                        fill: $accent;
+                    }
+                }
+                
             }
         }
-    }
-
-    .dot {
-        display: block;
-        margin: 0 $size/5;
     }
 
     .experience {
+        @include flex(row, center, center);
+        padding: $size*2 $size 0 $size;
 
         .tab {
-            padding: $size*2 0 $size $size*2;
-    
+            @include flex(column, center, flex-end);
+            width: 45%;
+            padding: 0px $size*2 0px 0px;
+            border-right: 4px solid rgba($color-light, .3);
+
             &__links {
-                font-size: 38px/16px *1rem;
+                padding: $size/2;
+
+                &:hover {
+                    color: $accent;;
+                }
             }
         }
     
         &__block {
-            margin: 0 $size*2;
-            padding-top: $size*2;
-        }
-    
-        &__title {
-            font-size: 30px/16px *1rem;
-            line-height: 36.57px/16px *1rem;
+            width: 50%;
+            padding: 0 0 0 $size*2;
+            margin: 0;
+            border-top: none;
         }
     }
 
     .services {
-        margin-top: $size*2;
-
-        &__heading {
-            font-size: 38px/16px *1rem;
-        }
-
-        &__wrapper {
-            @include flex(row, space-between, flex-start);
-        } 
     
         &__block {
-            margin-top: $size*2;
-            width: 45%;
+            width: 29%;
+        }
+
+        &__subheading {
+            transition: all .4s;
+
+            path{
+                transition: all .4s;
+            }
+
+            &:hover {
+                color: $accent;
+            }
+
+            &:hover path {
+                stroke: $accent
+            }
         }
     }
 
     .team {
-        padding: $size*2 0;
-    
-        &__title {
-            font-size: 38px/16px *1rem;
+        
+        &__block {
+            @include flex(row, flex-start, stretch);
+        }
+
+        .thumb {
+            width: 40%;
+            height: auto;
+        }
+
+        &__description {
+            @include flex(column, center, flex-start);
+            width: 60%;
+        }
+
+        &__subtitle {
+            transition: all .4s;
+
+            path{
+                transition: all .4s;
+            }
+
+            &:hover {
+                color: $accent;
+            }
+
+            &:hover path {
+                stroke: $accent
+            }
         }
     }
 
     .clients {
-        padding-top: 0;
-
-        &__list {
-            @include flex(row, center, center);
-        }
         
         &__item {
-            width: 100/3 *1%;
-            height: $size*4;
-    
-            &--hillel,
-            &--wannab {
-                background-size: 80%;
-            }
-        
-            &--tapgerine,
-            &--3dlook,
-            &--orangegear,
-            &--addtellige,
-            &--infratek {
-                background-size: 70%;
-            }
-    
-            &--clickky,
-            &--ecoleasing, 
-            &--infratek,
-            &--citypark,
-            &--artprint,
-            &--ultimate {
-                display: block;
-            }
-            
-            &--clickky {
-                background: #C71C36 url(../img/clients/clickky.png) center center no-repeat;
-                background-size: 60%;
-            }
-            
-            &--ecoleasing {
-                background: #DCF3F9 url(../img/clients/eco-leasing.png) center center no-repeat;
-                background-size: 65%;
-            }
-            
-            &--infratek {
-                background: #EAEAEA url(../img/clients/ingratek.png) center center no-repeat;
-                background-size: 75%;
-            }
-            
-            &--citypark {
-                background: #282240 url(../img/clients/city-par.png) center center no-repeat;
-                background-size: 75%;
-            }
-            
-            &--artprint {
-                background: #1D4568 url(../img/clients/artprint.png) center center no-repeat;
-                background-size: 75%;
-            }
-            
-            &--ultimate {
-                background: #000000 url(../img/clients/ultimatecard.png) center center no-repeat;
-                background-size: 60%;
-            }
+            width: 100/4 *1%;
         }
     }
 
     .news {
-    
-        &__heading {
-            font-size: 38px/16px*1rem;
 
-            br {
-                display: none;
+        &__subheading {
+            transition: all .4s;
+
+            path{
+                transition: all .4s;
             }
-        }
-        
-        &__wrapper {
-            @include flex(row, space-between, stretch);
+
+            &:hover {
+                color: $accent;
+            }
+
+            &:hover path {
+                stroke: $accent
+            }
         }
 
         &__block {
-            width: 47.5%;
-    
-            &:not(:first-child) {
-                margin-top: 0;
-            }
+            width: (100-5)/3 *1%;
 
             &--full {
-                width: 100%;
-                margin-top: $size!important;
+            width: (100 - 10)/3 *1%;
+            margin-top: 0!important;
             }
         }
+        
     }
 
     .footer {
-        position: relative;
-        text-align: left;
     
         .contacts {
-            @include flex(row, flex-start, center);
+    
+            &__vec {
+                
+                path {
+                    transition: all .4s;
+                }
 
-            &:not(:first-child) {
-                margin-top: $size*0.75;
-            }
-    
-            &__item {
-    
-                &:not(:first-child) {
-                    margin-top: 0;
+                &:hover path {
+                    fill: $accent;
                 }
             }
+
+            &__link {
+                transition: all .4s;
+
+                &--mail {
+                    &:hover { 
+                        color: $accent;;
+                    }
+                }
+
+            }
+            
         }   
     
         &__text {
             margin-top: $size;
             color: $color-text;
         }
+    }
 
+}
+
+
+@media screen and (min-width:1440px) {
+
+    .team {
+        .thumb {
+            height: 400px;
+        }
+    }
+
+    .news {
         &__block {
-            &--position {
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
+            width: (100 - 5)/3 * 1%;
         }
     }
 

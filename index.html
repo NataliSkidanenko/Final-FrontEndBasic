@@ -76,8 +76,8 @@
                             <svg  class="dot" width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3 6.5C4.65685 6.5 6 5.15685 6 3.5C6 1.84315 4.65685 0.5 3 0.5C1.34315 0.5 0 1.84315 0 3.5C0 5.15685 1.34315 6.5 3 6.5Z" fill="#E6E6F0"/>
                             </svg> 
-                            <li class="contacts__item contacts__item--desktop address">                                                                    
-                                <a href="#" class="contacts__link address">
+                            <li class="contacts__item contacts__item--desktop">                                                                    
+                                <a href="#" class="contacts__link contacts__link--address">
                                     Kyiv, Mechnikova str, 14/1
                                 </a>
                             </li>
@@ -85,15 +85,15 @@
                                 <path d="M3 6.5C4.65685 6.5 6 5.15685 6 3.5C6 1.84315 4.65685 0.5 3 0.5C1.34315 0.5 0 1.84315 0 3.5C0 5.15685 1.34315 6.5 3 6.5Z" fill="#E6E6F0"/>
                             </svg> 
                             <li class="contacts__item">
-                                <a href="tel:0800211927" class="contacts__link phone">
+                                <a href="tel:0800211927" class="contacts__link contacts__link--phone">
                                     0800 211 927
                                 </a>
                             </li>
                             <svg class="dot" width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3 6.5C4.65685 6.5 6 5.15685 6 3.5C6 1.84315 4.65685 0.5 3 0.5C1.34315 0.5 0 1.84315 0 3.5C0 5.15685 1.34315 6.5 3 6.5Z" fill="#E6E6F0"/>
                             </svg> 
-                            <li class="contacts__item contacts__item--desktop social"> 
-                                <a href="#" class="contacts__link">
+                            <li class="contacts__item contacts__item--desktop"> 
+                                <a href="#" class="contacts__link contacts__link--social">
                                     <svg class="contacts__vec" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="white"/>
                                     </svg>                                    
@@ -143,9 +143,13 @@
                 you legal solutions provider
             </h1>
             <a href="#anchor" class="splash__btn">
+                <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L10 10L19 1" stroke="white" stroke-width="2"/>
+                </svg>                    
             </a>
         </div>
 
+        <!-- Experience block -->
         <div class="experience" id="anchor">
             <div class="tab">
                 <button class="tab__links active" onclick="openTabs(event, 'consistent')">Consistent</button>
@@ -191,6 +195,7 @@
             </div>
         </div>
 
+        <!-- Services block -->
         <div class="services container">
             <a href="#" class="services__subheading">
                 Services
@@ -207,9 +212,9 @@
                     <div class="services__icon">
                         <img src="img/services/icon-ecommerce.svg" alt="Icon e-commerce" class="services__img">
                     </div>
-                    <p class="services__title">
+                    <a href="#" class="services__title">
                         IT and e-commerce
-                    </p>
+                    </a>
                     <p class="services__text">
                         An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not much work to do to hire an in-house lawyer.
                     </p>
@@ -219,9 +224,9 @@
                     <div class="services__icon">
                         <img src="img/services/icon-support.svg" alt="Icon support" class="services__img">
                     </div>
-                    <p class="services__title">
+                    <a href="#" class="services__title">
                         Comprehensive daily legal support
-                    </p>
+                    </a>
                     <p class="services__text">
                         In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And we know very well how difficult it is to find a good candidate with experience in the field of information technology in Ukraine.
                     </p>
@@ -231,9 +236,9 @@
                     <div class="services__icon">
                         <img src="img/services/icon-coprorate.svg" alt="Icon relationships" class="services__img">
                     </div>
-                    <p class="services__title">
+                    <a href="#" class="services__title">
                         Structuring corporate relationships
-                    </p>
+                    </a>
                     <p class="services__text">
                         Instead of just providing legal services, we will hire a lawyer or a whole team that will fit into the daily life of your company.
                     </p>
@@ -243,9 +248,9 @@
                     <div class="services__icon">
                         <img src="img/services/icon-trust.svg" alt="Icon hands" class="services__img">
                     </div>
-                    <p class="services__title">
+                    <a href="#" class="services__title">
                         Building contractual relations
-                    </p>
+                    </a>
                     <p class="services__text">
                         Once a week, or week after month, you have your own lawyer by your side. Anyone in the company can catch it at the coffee maker and just talk about current affairs instead of waiting for update status.
                     </p>
@@ -255,9 +260,9 @@
                     <div class="services__icon">
                         <img src="img/services/icon-protection.svg" alt="Icon protection" class="services__img">
                     </div>
-                    <p class="services__title">
+                    <a href="#" class="services__title">
                         Protection of business, intellectual property
-                    </p>
+                    </a>
                     <p class="services__text">
                         And all the other time he will work on new diverse projects, so he will definitely not stop in professional development. One way or another, all Axon Partners will work for you instead of a corporate lawyer.
                     </p>
@@ -267,9 +272,9 @@
                     <div class="services__icon">
                         <img src="img/services/icon-court.svg" alt="Icon court" class="services__img">
                     </div>
-                    <p class="services__title">
+                    <a href="#" class="services__title">
                         Judicial representation
-                    </p>
+                    </a>
                     <p class="services__text">
                         Is it a small, medium-sized company or a market leader? Local business or multinational company? Do you have your own legal department or not?
                     </p>
@@ -282,74 +287,68 @@
     <div class="container">
         <div class="team owl-carousel">
             <div class="team__block">
-                <div class="img__wrap">
-                    <img class="img" src="img/team/photo-alexandrovsky.png" alt="vertical" />
+                <div class="thumb">
+                    <img class="thumb__img" src="img/team/photo-alexandrovsky.png" alt="vertical" />
                 </div>
                 <div class="team__description">
-                    <p class="team__subtitle">
-                        <a href="#" class="team__link">
-                            Team
-                            <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
-                            </svg> 
-                        </a>
-                    </p>
+                    <a href="#" class="team__subtitle">
+                        Команда
+                        <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
+                        </svg> 
+                    </a>
                     <p class="team__title">
-                        We are used to taking responsibility and always guarantee honest, timely assistance, even in situations where most are powerless.
+                        Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
                     </p>
                     <p class="team__text team__text--important">
-                        Alexander Alexandrovsky
+                        Олександр Олександровський
                     </p>
                     <p class="team__text">
-                        Managing partner
+                        Керуючий партнер
                     </p>
                 </div>
             </div>
             <div class="team__block">
-                <div class="img__wrap">
-                    <img class="img" src="img/team/photo-alexandrovsky.png" alt="vertical" />
+                <div class="thumb">
+                    <img class="thumb__img" src="img/team/photo-alexandrovsky.png" alt="vertical" />
                 </div>
                 <div class="team__description">
-                    <p class="team__subtitle">
-                        <a href="#" class="team__link">
-                            Team
-                            <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
-                            </svg> 
-                        </a>
-                    </p>
+                    <a href="#" class="team__subtitle">
+                        Команда
+                        <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
+                        </svg> 
+                    </a>
                     <p class="team__title">
-                        We are used to taking responsibility and always guarantee honest, timely assistance, even in situations where most are powerless.
+                        Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
                     </p>
                     <p class="team__text team__text--important">
-                        Alexander Alexandrovsky
+                        Олександр Олександровський
                     </p>
                     <p class="team__text">
-                        Managing partner
+                        Керуючий партнер
                     </p>
                 </div>
             </div>
             <div class="team__block">
-                <div class="img__wrap">
-                    <img class="img" src="img/team/photo-alexandrovsky.png" alt="vertical" />
+                <div class="thumb">
+                    <img class="thumb__img" src="img/team/photo-alexandrovsky.png" alt="vertical" />
                 </div>
                 <div class="team__description">
-                    <p class="team__subtitle">
-                        <a href="#" class="team__link">
-                            Team
-                            <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
-                            </svg> 
-                        </a>
-                    </p>
+                    <a href="#" class="team__subtitle">
+                        Команда
+                        <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
+                        </svg> 
+                    </a>
                     <p class="team__title">
-                        We are used to taking responsibility and always guarantee honest, timely assistance, even in situations where most are powerless.
+                        Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
                     </p>
                     <p class="team__text team__text--important">
-                        Alexander Alexandrovsky
+                        Олександр Олександровський
                     </p>
                     <p class="team__text">
-                        Managing partner
+                        Керуючий партнер
                     </p>
                 </div>
             </div>
@@ -393,8 +392,8 @@
             <div class="news__wrapper">
                 <div class="news__block">
                     <a href="#" class="news__link">
-                        <div class="img__wrap">
-                            <img class="img" src="img/news/news-1.jpg" alt="vertical" />
+                        <div class="thumb">
+                            <img class="thumb__img" src="img/news/news-1.jpg" alt="vertical" />
                         </div>
                         <div class="news__info">
                             <p class="news__title">
@@ -412,8 +411,8 @@
                 
                 <div class="news__block">
                     <a href="#" class="news__link">
-                        <div class="img__wrap">
-                            <img class="img" src="img/news/news-2.jpg" alt="" />
+                        <div class="thumb">
+                            <img class="thumb__img" src="img/news/news-2.jpg" alt="" />
                         </div>
                         <div class="news__info">
                             <p class="news__title">
@@ -431,8 +430,8 @@
                 
                 <div class="news__block news__block--full">
                     <a href="#" class="news__link">
-                        <div class="img__wrap">
-                            <img class="img" src="img/news/news-3.jpg" alt="" />
+                        <div class="thumb">
+                            <img class="thumb__img" src="img/news/news-3.jpg" alt="" />
                         </div>
                         <div class="news__info">
                             <p class="news__title">
@@ -462,7 +461,7 @@
                         <circle cx="3" cy="3" r="3" fill="#B3B3BA"/>
                     </svg>
                     <li class="contacts__item">
-                        <a href="#" class="contacts__link link">
+                        <a href="#" class="contacts__link contacts__link--link">
                             On map
                         </a>
                     </li>
@@ -479,7 +478,7 @@
                         <circle cx="3" cy="3" r="3" fill="#B3B3BA"/>
                     </svg>
                     <li class="contacts__item">
-                        <a href="tel:0800211927" class="contacts__link phone">
+                        <a href="tel:0800211927" class="contacts__link contacts__link--phone">
                             0800 211 927
                         </a>
                     </li>
@@ -487,7 +486,7 @@
                         <circle cx="3" cy="3" r="3" fill="#B3B3BA"/>
                     </svg>
                     <li class="contacts__item">
-                        <a href="mailto:0800211927" class="contacts__link mail">
+                        <a href="mailto:0800211927" class="contacts__link contacts__link--mail">
                             contact@forstudy.space
                         </a>
                     </li>
