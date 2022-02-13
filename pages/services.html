@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="services.html" class="nav__link">
+                    <a href="services.html" class="nav__link nav__link--active">
                         services
                     </a>
                 </li>
@@ -109,6 +109,10 @@
                             <a href="../index.html" class="logo__link">
                                 <img src="../img/general/logo-white.svg" alt="Logo Hlegal" class="logo__img">
                             </a>
+                            <img class="slash" src="../img/general/slash.svg" alt="Slash symbol">  
+                            <span class="subtitle">
+                                services
+                            </span>                           
                         </div>
 
                         <button id="navButton" class="modal-btn"></button>
@@ -251,7 +255,7 @@
 
     <!---------- Footer ----------->
     <div class="container container--bg">
-        <footer class="footer">
+        <footer class="footer footer--noborder">
             <div class="footer__block">
                 <ul class="contacts">
                     <li class="contacts__item">
@@ -302,26 +306,7 @@
 
     <!---------- Scripts----------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/tabs.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/anchor.js"></script>
+    <script src="../js/modal.js"></script>
 
-    <!---------- Initialization owl-carousel ----------->
-    <script>
-        $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
-                loop:true,
-                nav:false,
-                margin:20,
-                responsive:{
-                    0:{
-                    items:1
-                    }
-                }
-            });
-        });
-    </script>
-    
 </body>
 </html>

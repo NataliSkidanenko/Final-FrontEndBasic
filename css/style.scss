@@ -68,7 +68,7 @@ body {
             background-color: $color-bg;
             border-radius: $radius;
 
-            &.active {
+            &--active {
                 color: $accent;
             }
 
@@ -196,6 +196,9 @@ body {
                 &--desktop {
                     display: none;
                 }
+            }
+
+            &__link {
 
                 &--phone {
                     font-weight: bold;
@@ -204,9 +207,21 @@ body {
         }
 
         .logo {
+            @include flex(row, flex-start, flex-start);
 
             &__img {
                 width: 70px;
+            }
+
+            .subtitle {
+                font-size: 1.25rem;
+                line-height: 1.5237rem;
+                margin-left: $size/6;
+            }
+
+            .slash {
+                width: 12px;
+                margin-left: $size/6;
             }
         }
     }
@@ -366,7 +381,7 @@ body {
 }
 
 .team {
-    padding: $size 0 0 0;
+    padding-top: $size;
 
     &__block {
         background-color: $color-bg;
@@ -410,7 +425,7 @@ body {
 }
 
 .clients {
-    padding-top: $size;
+    padding-top: $size*2;
     text-align: center;
 
     &__heading {
@@ -533,6 +548,10 @@ body {
     text-align: center;
     border-top: 2px solid $color-separator;
 
+    &--noborder {
+        border: none;
+    }
+    
     .contacts {
 
         &:not(:first-child) {
@@ -651,6 +670,15 @@ body {
             &__img {
                 width: 130px;
             }
+
+            .subtitle {
+                font-size: 2.25rem;
+                line-height: 2.7425rem;
+            }
+            .slash {
+                width: 21px;
+            }
+
         }
 
         .contacts {
