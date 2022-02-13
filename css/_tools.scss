@@ -1,22 +1,20 @@
 // Variables
 $size: 30px;
-
-$main-regular: #323264;
-$main-alt: #46466E;
-$main-soft: #686887;
+$radius: 12px;
 
 $accent: #F0145A;
-
 $active-regular: #24A3FF;
 $active-hover: #0085FF;
 $active-active: #006CCF;
-
 $color-black: #000000;
 $color-light: #FFFFFF;
 $color-bg: #F5F5FA;
 $color-bg-alt: #EDEDF7;
 $color-text: #B3B3BA;
 $color-separator: #E6E6F0;
+$main-regular: #323264;
+$main-alt: #46466E;
+$main-soft: #686887;
 
 //Extensions
 %gradient-regular {
@@ -40,7 +38,7 @@ $color-separator: #E6E6F0;
 }
 
 %link-subheading {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
     text-transform: uppercase;
     color: $active-regular;
@@ -48,8 +46,8 @@ $color-separator: #E6E6F0;
 
 %heading {
     margin-top: $size/3;
-    font-size: 30px;
-    line-height: 36.57px;
+    font-size: 1.875rem;
+    line-height: 2.2856rem;
     font-weight: bold;
     color: $accent;
     @extend %gradient-text;
@@ -59,9 +57,9 @@ $color-separator: #E6E6F0;
 }
 
 %title {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: bold;
-    line-height: 26.82px;
+    line-height: 1.6763rem;
     color: $active-regular;
 }
 

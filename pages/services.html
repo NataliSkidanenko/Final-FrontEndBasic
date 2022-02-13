@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Hlegal — Homepage</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Hlegal — Services</title>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="pages/services.html" class="nav__link">
+                    <a href="services.html" class="nav__link">
                         services
                     </a>
                 </li>
@@ -49,11 +49,8 @@
     <!----------- Gradient block ----------->
     <div class="main">
 
-        <!----------- Splash screen ----------->
-        <div class="splash">
-
             <!----------- Header ----------->
-            <header class="header">
+            <header class="header header--static">
                 <div class="container">
                     <div class="header__block header__block--bg">
 
@@ -109,8 +106,8 @@
                     <div class="header__block header__block--column">
 
                         <div class="logo">
-                            <a href="index.html" class="logo__link">
-                                <img src="img/general/logo-white.svg" alt="Logo Hlegal" class="logo__img">
+                            <a href="../index.html" class="logo__link">
+                                <img src="../img/general/logo-white.svg" alt="Logo Hlegal" class="logo__img">
                             </a>
                         </div>
 
@@ -123,7 +120,7 @@
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a href="pages/services.html" class="nav__link">
+                                <a href="services.html" class="nav__link nav__link--active">
                                     services
                                 </a>
                             </li>
@@ -148,67 +145,9 @@
                 </div>
             </header>
 
-            <h1 class="splash__heading">
-                you legal solutions provider
-            </h1>
-
-            <a href="#anchor" class="splash__btn">
-                <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1L10 10L19 1" stroke="white" stroke-width="2"/>
-                </svg>                    
-            </a>
-
-        </div>
-
-        <!----------- Experience block ----------->
-        <div class="experience" id="anchor">
-            <div class="tab">
-                <button class="tab__links active" onclick="openTabs(event, 'consistent')">Consistent</button>
-                <button class="tab__links" onclick="openTabs(event, 'customer-oriented')">Customer oriented</button>
-                <button class="tab__links" onclick="openTabs(event, 'innovative')">Innovative</button>
-                <button class="tab__links" onclick="openTabs(event, 'business-oriented')">Business oriented</button>
-              </div>
-              
-            <div class="experience__block active" id="consistent">
-                <p class="experience__title">
-                    We turn the idea of legal services
-                </p>
-                <p class="experience__text">
-                    Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
-                </p>
-            </div>
-            
-            <div class="experience__block" id="customer-oriented">
-                <p class="experience__title">
-                    We turn the idea of legal services
-                </p>
-                <p class="experience__text">
-                    Consolidating many yearse industry. Many of them form the practice of applying the law of the sea in Ukraine.
-                </p>
-            </div>
-            
-            <div class="experience__block" id="innovative">
-                <p class="experience__title">
-                    We turn the idea of legal services
-                </p>
-                <p class="experience__text">
-                    Consolidating many years of expeojects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
-                </p>
-            </div>
-            
-            <div class="experience__block" id="business-oriented">
-                <p class="experience__title">
-                    We turn the idea of legal services
-                </p>
-                <p class="experience__text">
-                    Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
-                </p>
-            </div>
-        </div>
-
         <!----------- Services block ----------->
         <div class="services container">
-            <a href="pages/services.html" class="services__subheading">
+            <a href="#" class="services__subheading">
                 Services
                 <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 1L6 5.5L1.5 10" stroke="#24A3FF" stroke-width="2"/>
@@ -540,6 +479,6 @@
             });
         });
     </script>
-
+    
 </body>
 </html>

@@ -15,10 +15,6 @@ body {
     }
 }
 
-.link {
-    color: $active-regular;
-}
-
 .modal-btn {
     width: $size;
     height: $size;
@@ -33,6 +29,7 @@ body {
     background-color: rgba($main-regular, .7); 
     z-index: 99; 
     overflow: hidden; 
+    transition: all .4s;
 
     &__content {
         position: absolute;
@@ -42,7 +39,7 @@ body {
         margin: 0 auto;
         padding: $size*2 $size/3 $size/3 $size/3;
         background-color: $color-light;
-        border-radius: 12px 12px 0 0;
+        border-radius: $radius $radius 0 0;
         transform: translate(-50%, 0);
         animation-name: modal;
         animation-duration: 0.5s
@@ -65,11 +62,11 @@ body {
         &__link {
             display: block;
             padding: $size/4 0;
-            font-size: 24px/16px *1rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: $active-regular;
             background-color: $color-bg;
-            border-radius: 12px;
+            border-radius: $radius;
 
             &.active {
                 color: $accent;
@@ -80,9 +77,7 @@ body {
             }
         }
     }
-
 }
-
 
 .close {
     position: absolute;
@@ -109,14 +104,13 @@ body {
     }
 }
 
-
 .main {
     @extend %gradient-supersoft;
     position: relative;
     margin-bottom: 20px;
     padding-bottom: $size*2;
     color: $color-light;
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 $radius $radius;
 
     &::after {
         content: '';
@@ -126,7 +120,7 @@ body {
         width: 335px/375px *100%;
         height: $size/3;
         background-color: #CACADB;
-        border-radius: 0 0 12px 12px;
+        border-radius: 0 0 $radius $radius;
         transform: translate(-50%, 0);
     }
 
@@ -138,7 +132,7 @@ body {
         width: 295px/375px *100%;
         height: $size/3;
         background-color: $color-bg-alt;
-        border-radius: 0 0 12px 12px;
+        border-radius: 0 0 $radius $radius;
         transform: translate(-50%, 0);
     }
 }
@@ -149,6 +143,10 @@ body {
     top: 0;
     width: 100%;
     z-index: 2;
+
+    &--static {
+        position: static;
+    }
 
     a {
         color: #fff;
@@ -169,7 +167,7 @@ body {
 
         .language {
             @include flex(row, space-between, center);
-            font-size: 12px/16px*1rem;
+            font-size: 0.75rem;
 
             &__item {
                 @include flex(row, center, center);
@@ -232,7 +230,7 @@ body {
     &__heading {
         width: 315px/375px *100%;
         margin: 0 auto;
-        font-size: 38px/16px *1rem;
+        font-size: 2.375rem;
         font-weight: bold;
         text-align: center;
     }
@@ -246,9 +244,7 @@ body {
         border-radius: 50%;
         border: 2px solid rgba($color-light, .5);
     }
-    
 }
-
 
 .experience {
 
@@ -264,7 +260,7 @@ body {
 
         &__links {
             padding-right: $size;
-            font-size: 30px/16px *1rem;
+            font-size: 1.875rem;
             color: $color-text;
             font-weight: bold;
             text-align: left;
@@ -295,14 +291,14 @@ body {
 
     &__title {
         font-weight: bold;
-        font-size: 20px/16px *1rem;
-        line-height: 24px/16px *1rem;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
     }
 
     &__text {
         margin-top: $size;
-        font-size: 19px/16px *1rem;
-        line-height: 30px/16px *1rem;
+        font-size: 1.1875rem;
+        line-height: 1.875rem;
     }
 }
 
@@ -327,7 +323,7 @@ body {
         width: 92px;
         height: 92px;
         background-color: $color-light;
-        border-radius: 24px;
+        border-radius: $radius*2;
     }
 
     &__title {
@@ -344,6 +340,7 @@ body {
 .owl-dots {
     @include flex(row, center, center);
     margin-top: $size;
+
     .owl-dot {
         display: inline-block;
         zoom: 1;
@@ -418,7 +415,7 @@ body {
 
     &__heading {
         margin-bottom: $size;
-        font-size: 14px/16px *1rem;
+        font-size: 0.875rem;
         font-weight: bold;
         color: $main-regular;
         text-transform: uppercase;
@@ -466,14 +463,13 @@ body {
         &--ultimate {
             display: none;
         }
-
     }
 }
 
 .news {
     padding: $size 0;
     background-color: $color-bg;
-    border-radius: 12px;
+    border-radius: $radius;
 
     &__subheading {
         @extend %link-subheading;
@@ -486,7 +482,7 @@ body {
 
     &__block {
         background-color: $color-light;
-        border-radius: 12px;
+        border-radius: $radius;
         overflow: hidden;
 
         &:not(:first-child) {
@@ -518,15 +514,15 @@ body {
 
     &__subtitle {
         margin-bottom: $size/2;
-        font-size: 12px/16px *1rem;
+        font-size: 0.75rem;
         font-weight: bold;
         color: $color-text;
         text-transform: uppercase;
     }
     &__text {
         padding-top: $size/2;
-        font-size: 14px/16px *1rem;
-        line-height: 22px/16px *1rem;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
         color: $color-black;
         border-top: 4px solid $color-separator;
     }
@@ -558,7 +554,7 @@ body {
 
             &--link {
                 @extend %link-subheading;
-                font-size: 12px/16px *1rem;
+                font-size: 0.75rem;
             }
 
             &--phone {
@@ -681,6 +677,33 @@ body {
                 font-weight: bold;
                 padding-right: $size/2;
             }
+
+            &__link {
+                position: relative;
+                transition: all .4s;
+
+                &::after {
+                    opacity: 0;
+                    content: '';
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $color-light;
+                    transition: all .4s;
+                    
+                }
+
+                &--active {
+                    color: $accent;
+
+                    &::after {
+                        opacity: 1;
+                        background-color: $accent;
+                    }
+                }
+            }
         }
     }
 
@@ -695,7 +718,7 @@ body {
             padding: $size*2 0 $size $size*2;
     
             &__links {
-                font-size: 38px/16px *1rem;
+                font-size: 2.375rem;
             }
         }
     
@@ -705,8 +728,8 @@ body {
         }
     
         &__title {
-            font-size: 30px/16px *1rem;
-            line-height: 36.57px/16px *1rem;
+            font-size: 1.875rem;
+            line-height: 2.2856rem;
         }
     }
 
@@ -714,8 +737,8 @@ body {
         margin-top: $size*2;
 
         &__heading {
-            font-size: 38px/16px *1rem;
-            line-height: 46.32px;
+            font-size: 2.375rem;
+            line-height: 2.895rem;
         }
 
         &__wrapper {
@@ -732,8 +755,8 @@ body {
         padding: $size*2 0;
     
         &__title {
-            font-size: 38px/16px *1rem;
-            line-height: 46.32px;
+            font-size: 2.375rem;
+            line-height: 2.895rem;
         }
     }
 
@@ -805,7 +828,7 @@ body {
     
         &__heading {
             font-size: 2.375rem;
-            line-height: 46.32px;
+            line-height: 2.895rem;
 
             br {
                 display: none;
@@ -862,7 +885,6 @@ body {
             }
         }
     }
-
 }
 
 @media screen and (min-width:1024px) {
@@ -936,33 +958,6 @@ body {
                     opacity: 1;
                 }
             }
-
-            &__link {
-                position: relative;
-                transition: all .4s;
-
-                &::after {
-                    opacity: 0;
-                    content: '';
-                    position: absolute;
-                    bottom: -3px;
-                    left: 0;
-                    width: 100%;
-                    height: 2px;
-                    background-color: $color-light;
-                    transition: all .4s;
-                    
-                }
-
-                &--active {
-                    color: $accent;
-
-                    &::after {
-                        background-color: $accent;
-                        
-                    }
-                }
-            }
         }
 
         .contacts {
@@ -982,7 +977,6 @@ body {
                         fill: $accent;
                     }
                 }
-                
             }
         }
     }
@@ -1103,7 +1097,6 @@ body {
             margin-top: 0!important;
             }
         }
-        
     }
 
     .footer {
@@ -1129,9 +1122,7 @@ body {
                         color: $accent;;
                     }
                 }
-
             }
-            
         }   
     
         &__text {
@@ -1139,7 +1130,6 @@ body {
             color: $color-text;
         }
     }
-
 }
 
 
@@ -1156,5 +1146,4 @@ body {
             width: (100 - 5)/3 * 1%;
         }
     }
-
 }
