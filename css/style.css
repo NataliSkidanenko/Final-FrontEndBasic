@@ -260,10 +260,6 @@ body {
   z-index: 2;
 }
 
-.header--static {
-  position: static;
-}
-
 .header a {
   color: #fff;
 }
@@ -341,6 +337,7 @@ body {
 }
 
 .header__block .language__item--active {
+  color: #FFFFFF;
   background-color: #F0145A;
 }
 
@@ -392,6 +389,34 @@ body {
 
 .header .nav {
   display: none;
+}
+
+.header--static {
+  position: static;
+}
+
+.header--white {
+  color: #323264;
+}
+
+.header--white .header__block--bg {
+  background-color: #F5F5FA;
+}
+
+.header--white a {
+  color: #B3B3BA;
+}
+
+.header--white .language__item--active a {
+  color: #FFFFFF;
+}
+
+.header--white .contacts__link--address {
+  color: #B3B3BA;
+}
+
+.header--white .modal-btn {
+  background: url(../img/general/hamburger-dark.svg) center center no-repeat;
 }
 
 .dot {

@@ -144,10 +144,6 @@ body {
     width: 100%;
     z-index: 2;
 
-    &--static {
-        position: static;
-    }
-
     a {
         color: #fff;
     }
@@ -179,6 +175,7 @@ body {
                 transition: all .3s;
 
                 &--active {
+                    color: $color-light;
                     background-color: $accent;
                 }
 
@@ -229,6 +226,53 @@ body {
     .nav {
         display: none       
     }
+
+    &--static {
+        position: static;
+    }
+
+    &--white {
+        color: $main-regular;
+
+        .header__block {
+
+            &--bg{
+                background-color: $color-bg;
+            }
+        }
+
+        a {
+            color: $color-text;
+        }
+
+        .language {
+
+            &__item {
+            
+                &--active {
+                  
+                    a {
+                        color: $color-light;
+                    }
+                }
+            }
+        }
+
+        .contacts {
+            
+            &__link {
+                &--address {
+                    color: $color-text;
+                }
+            }
+            
+        }
+        
+        .modal-btn {
+            background: url(../img/general/hamburger-dark.svg) center center no-repeat;
+        }
+    }
+
 }
 
 .dot {
