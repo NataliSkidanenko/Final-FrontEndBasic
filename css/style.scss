@@ -366,7 +366,7 @@ body {
 }
 
 .team {
-    padding: $size 0;
+    padding: $size 0 0 0;
 
     &__block {
         background-color: $color-bg;
@@ -615,6 +615,16 @@ body {
         display: none;
     }
 
+    .main {
+        &::after {
+            width: 98%;
+        }
+
+        &__shadow {
+            width: 96%;
+        }
+    }
+
     .header {
         padding: $size*2 0 0 0;
 
@@ -752,7 +762,7 @@ body {
     }
 
     .team {
-        padding: $size*2 0;
+        padding: $size*2 0 0 0;
     
         &__title {
             font-size: 2.375rem;
@@ -761,7 +771,7 @@ body {
     }
 
     .clients {
-        padding-top: 0;
+        padding-top: $size*2;
 
         &__list {
             @include flex(row, center, center);
@@ -983,7 +993,7 @@ body {
 
     .experience {
         @include flex(row, center, center);
-        padding: $size*2 $size 0 $size;
+        padding: $size*2 $size*2 0 $size*2;
 
         .tab {
             @include flex(column, center, flex-end);
@@ -1135,9 +1145,77 @@ body {
 
 @media screen and (min-width:1440px) {
 
+    .experience {
+        .tab {
+            width: 43%;
+        }
+
+        &__block {
+            width: 57%;
+        }
+    }
+    
     .team {
+
         .thumb {
-            height: 400px;
+            width: 27%;
+            height: 350px;
+        }
+
+        &__description {
+            width: 73%;
+        }
+    }
+
+    .news {
+        &__block {
+            width: (100 - 5)/3 * 1%;
+        }
+    }
+}
+
+@media screen and (min-width:1920px) {
+
+    .container {
+        padding: 0 8.5%;
+    }
+
+    .header {
+        .container {
+            padding: 0 8.5%;
+        }
+    }
+
+    .experience {
+        padding: $size*2 8.5% 0 8.5%;
+
+        .tab {
+            width: 35%;
+        }
+
+        &__block {
+            width: 65%;
+        }
+    }
+    
+    .team {
+
+        .thumb {
+            width: 25%;
+            height: 300px;
+        }
+
+        &__description {
+            width: 75%;
+        }
+    }
+
+    .clients {
+        &__list {
+            width: 90%;
+            margin: 0 auto $size*2 auto;
+            border-radius: $radius;
+            overflow: hidden;
         }
     }
 
