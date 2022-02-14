@@ -1016,6 +1016,18 @@ body {
     opacity: 1;
     background-color: #F0145A;
   }
+  .header--white .header__block--bg {
+    background: none;
+  }
+  .header--white .contacts__link--social path {
+    fill: #B3B3BA;
+  }
+  .header--white .nav__link {
+    color: #24A3FF;
+  }
+  .header--white .nav__link--active {
+    color: #F0145A;
+  }
   .dot {
     display: block;
     margin: 0 6px;
@@ -1274,6 +1286,9 @@ body {
   }
   .header .contacts__link--social:hover path {
     fill: #F0145A;
+  }
+  .header--white .contacts__link--address {
+    color: #B3B3BA;
   }
   .experience {
     display: -webkit-box;

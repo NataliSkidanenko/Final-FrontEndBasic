@@ -267,7 +267,7 @@ body {
             }
             
         }
-        
+
         .modal-btn {
             background: url(../img/general/hamburger-dark.svg) center center no-repeat;
         }
@@ -784,6 +784,35 @@ body {
                 }
             }
         }
+
+        &--white {
+            .header__block {
+
+                &--bg{
+                    background:none;
+                }
+            }
+
+            .contacts {
+                &__link {
+                    &--social {
+                        path {
+                            fill: $color-text;
+                        }
+                    }
+                }
+            }
+
+            .nav {
+                &__link {
+                    color: $active-regular;
+
+                    &--active {
+                        color: $accent;;
+                    }
+                }
+            }
+        }
     }
 
     .dot {
@@ -1054,6 +1083,16 @@ body {
 
                     &:hover  path {
                         fill: $accent;
+                    }
+                }
+            }
+        }
+
+        &--white {
+            .contacts {
+                &__link {
+                    &--address {
+                       color: $color-text;
                     }
                 }
             }
