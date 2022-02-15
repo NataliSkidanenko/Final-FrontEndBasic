@@ -470,11 +470,7 @@ body {
     text-align: center;
 
     &__heading {
-        margin-bottom: $size;
-        font-size: 0.875rem;
-        font-weight: bold;
-        color: $main-regular;
-        text-transform: uppercase;
+        @extend %heading-mini;
     }
     
     &__item {
@@ -642,6 +638,109 @@ body {
     }
 }
 
+///////// Internal pages
+
+.content {
+    padding-top: $size;
+    color: $color-black;
+}
+
+.article {
+
+    &__heading {
+        @extend %heading;
+
+        &--margin {
+            margin-top: $size;
+        }
+    }
+    
+    &__text {
+        margin-top: $size;
+        font-size: 1.1875rem;
+        line-height: 1.875rem;
+    }
+
+    .feature {
+        margin-top: $size;
+        padding-left: $size;
+        border-left: 4px solid $color-separator;
+
+        &__block {
+            &:not(:last-child) {
+                margin-bottom: $size + $size /3;
+            }
+        }
+
+        &__title {
+            @include flex(row, flex-start, center);
+            @extend %heading;
+            font-size: 2.25rem;
+
+            span {
+                margin-left: $size/4;
+            }
+        }
+        
+        &__text {
+            margin-top: $size/3;
+            line-height: 1.2188rem;
+            color: $main-regular;
+        }
+    }
+}
+
+.hero {
+    position: relative;
+    margin: $size 0;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 2.25rem;
+        font-weight: bold;
+        color: rgba($color-light, .8);
+        text-transform: uppercase;
+        letter-spacing: 0.8125rem;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+.achievements {
+    margin-top: $size*2;
+    padding: $size 0;
+
+    &__heading {
+        @extend %heading-mini;
+    }
+
+    &__item {
+        @include flex(row, center, center);
+        width: 70%;
+        height: 90px;
+        margin: 0 auto;
+        padding: $size/2 0;
+        background-color: $color-light;
+        border-radius: $radius;
+    }
+
+    &__img {
+        height: 100%;
+    }
+
+    .owl-carousel {
+        .owl-item img {
+            width: auto;
+        }
+    }
+
+}
 @keyframes modal {
     from {
         opacity:0;
