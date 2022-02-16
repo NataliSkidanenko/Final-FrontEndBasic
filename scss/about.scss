@@ -1,0 +1,228 @@
+// Styles for page About Us
+
+.article {
+
+    &__heading {
+        @extend %heading;
+        margin-bottom: $size;
+
+        &--margin {
+            margin-top: $size;
+        }
+    }
+    
+    &__text {
+        margin-top: $size;
+        font-size: 1.1875rem;
+        line-height: 1.875rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .feature {
+        margin-top: $size;
+        padding-left: $size;
+        border-left: 4px solid $color-separator;
+
+        &__block {
+            &:not(:last-child) {
+                margin-bottom: $size + $size /3;
+            }
+        }
+
+        &__title {
+            @include flex(row, flex-start, center);
+            @extend %heading;
+            font-size: 2.25rem;
+
+            span {
+                margin-left: $size/4;
+            }
+        }
+        
+        &__text {
+            margin-top: $size/3;
+            line-height: 1.2188rem;
+            color: $main-regular;
+        }
+    }
+}
+
+.hero {
+    position: relative;
+    margin: $size 0;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        font-size: 2.25rem;
+        font-weight: bold;
+        color: rgba($color-light, .8);
+        text-transform: uppercase;
+        letter-spacing: 0.8125rem;
+        transform: translate(-41%, -50%);
+        text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+    }
+}
+
+.achievements {
+    margin-top: $size*2;
+    padding: $size 0;
+
+    &__heading {
+        @extend %heading-mini;
+    }
+
+    &__item {
+        @include flex(row, center, center);
+        width: 70%;
+        height: 90px;
+        margin: 0 auto;
+        padding: $size/2 0;
+        background-color: $color-light;
+        border-radius: $radius;
+    }
+
+    &__img {
+        height: 100%;
+    }
+
+    .owl-carousel {
+        .owl-item img {
+            width: auto;
+        }
+    }
+}
+
+
+
+@media screen and (min-width:768px) {
+
+    .article {
+        &__heading {
+            font-size: 2.375rem;
+            line-height: 2.895rem;
+        }
+    }
+
+    .hero {
+        margin: $size*2 0;
+
+        &__heading {
+            font-size: 2.875rem;
+            letter-spacing: 3.9375rem;
+        }
+    }
+
+    .achievements {
+        padding: $size $size*2;
+        
+        &__item {
+            width: 90%;
+            height: 110px;
+        }
+
+        &__img {
+            height: 40px;
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .article {
+        @include flex(row, flex-start, flex-start);
+
+        &__block {
+            width: 57%;
+            padding-right: $size;
+
+            &:last-child {
+                width: 43%;
+                padding-left: $size;
+            }
+        }
+
+        &__heading {
+            margin-top: 0;
+        }
+
+        .feature {
+            margin-top: 0;
+        }
+    }
+
+    .hero {
+
+        &__heading {
+            font-size: 5.375rem;
+        }
+    }
+
+    .achievements {
+        &__img {
+            height: 52px;
+        }
+    }
+}
+
+
+@media screen and (min-width:1440px) {
+    .article {
+
+        &.container {
+            padding: 0 $size*4;
+        }
+
+        &__block {
+            width: 60%;
+            padding-right: $size;
+
+            &:last-child {
+                width: 40%;
+            }
+        }
+    }
+
+    .hero {
+        &__heading {
+            font-size: 6rem;
+        }
+    }
+
+    .achievements {
+        
+        &__item {
+            width: 95%;
+        }
+
+        &__img {
+            height: 60px;
+        }
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .article {
+        &.container {
+            padding: 0 14%;
+        }
+
+        &__block {
+            width: 70%;
+            padding-right: $size;
+
+            &:last-child {
+                width: 30%;
+            }
+        }
+    }
+}
