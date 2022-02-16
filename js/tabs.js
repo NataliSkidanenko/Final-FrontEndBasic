@@ -24,7 +24,7 @@ function newsTabs(evt, tabsName) {
     var i, tabcontent, tablinks;
 
     // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("news__wrapper");
+    tabcontent = document.getElementsByClassName("news__section");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }

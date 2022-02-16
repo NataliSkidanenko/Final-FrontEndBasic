@@ -335,17 +335,6 @@
 }
 
 
-@keyframes splash {
-    0% {
-        background-size: auto 200vh
-    }
-    50% {
-        background-size: auto 100vh
-    }
-    100% {
-        background-size: auto 200vh
-    }
-}
 
 @media screen and (min-width:768px) {
 
@@ -634,6 +623,14 @@
         &__block {
             width: (100-5)/3 *1%;
 
+            &:hover {
+                
+                .news__title {
+                    transition: all .4s;
+                    color: $accent;
+                }
+            }
+
             &--full {
             width: (100 - 10)/3 *1%;
             margin-top: 0!important;
@@ -665,6 +662,41 @@
             width: 73%;
         }
     }
+
+    .clients {
+        
+        &__item {
+
+            &--hillel,
+            &--wannab,
+            &--tapgerine,
+            &--3dlook,
+            &--orangegear,
+            &--addtellige,
+            &--infratek {
+                background-size: 57%;
+            }
+            
+            &--clickky,
+            &--infratek {
+                background-size: 46%;
+            }
+            
+            &--ecoleasing {
+                background-size: 38%;
+            }
+            
+            &--citypark,
+            &--artprint {
+                background-size: 52%;
+            }
+            
+            &--ultimate {
+                background-size: 42%;
+            }
+        }
+    }
+
 
     .news {
         &__block {
