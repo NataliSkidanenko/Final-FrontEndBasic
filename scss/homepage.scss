@@ -190,7 +190,7 @@
     &__photo {
         height: 500px;
 
-        &--alexandrovsky {
+        &--first{
             background: url(../img/team/photo-alexandrovsky.png) center center no-repeat;
             background-size: cover;
         }
@@ -273,9 +273,9 @@
 }
 
 .news {
-    padding: $size 0;
+    padding-top: $size;
+    padding-bottom: $size;
     background-color: $color-bg;
-    border-radius: $radius;
 
     &__subheading {
         @extend %link-subheading;

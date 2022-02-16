@@ -138,6 +138,32 @@ body {
   padding-top: 30px;
   color: #000000;
 }
+.content--nopadding {
+  padding-top: 0;
+}
+
+.btn-primary {
+  text-align: center;
+}
+.btn-primary__link {
+  display: inline-block;
+  margin: 30px 0;
+  padding: 18px 30px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #24A3FF;
+  -webkit-box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+          box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.btn-primary__link:hover {
+  background-color: #0085FF;
+}
+.btn-primary__link:active {
+  background-color: #006CCF;
+}
 
 .modal-btn {
   width: 30px;
@@ -953,7 +979,7 @@ body {
 .team__photo {
   height: 500px;
 }
-.team__photo--alexandrovsky {
+.team__photo--first {
   background: url(../img/team/photo-alexandrovsky.png) center center no-repeat;
   background-size: cover;
 }
@@ -1008,9 +1034,9 @@ body {
 }
 
 .news {
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #F5F5FA;
-  border-radius: 12px;
 }
 .news__heading {
   margin-bottom: 30px;
@@ -1655,4 +1681,43 @@ body {
   .article__block:last-child {
     width: 30%;
   }
+}
+.news .tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.news .tab__wrapper {
+  display: inline-block;
+  background-color: #E6E6F0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.news .tab__links {
+  padding: 10px 30px;
+  font-weight: bold;
+  color: #323264;
+  background: none;
+}
+.news .tab__links.active {
+  background-color: #FFFFFF;
+}
+.news__wrapper {
+  display: none;
+}
+.news__wrapper.active {
+  display: block;
 }

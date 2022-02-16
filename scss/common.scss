@@ -18,6 +18,35 @@ body {
 .content {
     padding-top: $size;
     color: $color-black;
+
+    &--nopadding {
+        padding-top: 0;
+    }
+}
+
+.btn-primary {
+    text-align: center;
+
+    &__link {
+        display: inline-block;
+        margin: $size 0;
+        padding: $size/2 + $size/10 $size;
+        font-weight: bold;
+        color: $color-light;
+        background-color: $active-regular;
+        box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+        border-radius: $radius;
+        transition: all .4s;
+
+        &:hover {
+            background-color: $active-hover;
+        }
+
+        &:active {
+            background-color: $active-active;
+        }
+
+    }
 }
 
 .modal-btn {

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Hlegal — Publications</title>
+</head>
+<body>
+
+    <!-- Modal window -->
+    <div id="navModal" class="modal">
+        <div class="modal__content">
+            <div class="modal__header">
+              <span class="close"></span>
+            </div>
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="about-us.html" class="nav__link">
+                        about us
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="services.html" class="nav__link">
+                        services
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        team
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="news.html" class="nav__link  nav__link--active">
+                        news
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        contacts
+                    </a>
+                </li>
+            </ul>
+          </div>
+    </div>
+
+
+    <!----------- Header ----------->
+    <header class="header header--static header--white">
+        <div class="container">
+            <div class="header__block header__block--bg">
+
+                <ul class="language">
+                    <li class="language__item">
+                        <a href="#" class="language__link">
+                            ук
+                        </a>
+                    </li>
+                    <li class="language__item">
+                        <a href="#" class="language__link">
+                            ру
+                        </a>
+                    </li>
+                    <li class="language__item language__item--active">
+                        <a href="#" class="language__link">
+                            en
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="contacts">
+                    <svg  class="dot" width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6.5C4.65685 6.5 6 5.15685 6 3.5C6 1.84315 4.65685 0.5 3 0.5C1.34315 0.5 0 1.84315 0 3.5C0 5.15685 1.34315 6.5 3 6.5Z" fill="#E6E6F0"/>
+                    </svg> 
+                    <li class="contacts__item contacts__item--desktop">                                                                    
+                        <a href="#" class="contacts__link contacts__link--address">
+                            Kyiv, Mechnikova str, 14/1
+                        </a>
+                    </li>
+                    <svg class="dot" width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6.5C4.65685 6.5 6 5.15685 6 3.5C6 1.84315 4.65685 0.5 3 0.5C1.34315 0.5 0 1.84315 0 3.5C0 5.15685 1.34315 6.5 3 6.5Z" fill="#E6E6F0"/>
+                    </svg> 
+                    <li class="contacts__item">
+                        <a href="tel:0800211927" class="contacts__link contacts__link--phone">
+                            0800 211 927
+                        </a>
+                    </li>
+                    <svg class="dot" width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6.5C4.65685 6.5 6 5.15685 6 3.5C6 1.84315 4.65685 0.5 3 0.5C1.34315 0.5 0 1.84315 0 3.5C0 5.15685 1.34315 6.5 3 6.5Z" fill="#E6E6F0"/>
+                    </svg> 
+                    <li class="contacts__item contacts__item--desktop"> 
+                        <a href="#" class="contacts__link contacts__link--social">
+                            <svg class="contacts__vec" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="white"/>
+                            </svg>                                    
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="header__block header__block--column">
+
+                <div class="logo">
+                    <a href="../index.html" class="logo__link">
+                        <img src="../img/general/logo-dark.svg" alt="Logo Hlegal" class="logo__img">
+                    </a>
+                    <img class="slash" src="../img/general/slash.svg" alt="Slash symbol">  
+                    <span class="subtitle">
+                        publications
+                    </span>                           
+                </div>
+
+                <button id="navButton" class="modal-btn"></button>
+
+                <ul class="nav nav--tablet">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            about us
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services.html" class="nav__link">
+                            services
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            team
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="news.html" class="nav__link  nav__link--active">
+                            news
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">
+                            contacts
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main block -->
+    <main class="content content--nopadding">
+
+        <!----------- News block ----------->
+        <div class=" news container container--bg"> 
+            <div class="tab">
+                <div class="tab__wrapper">
+                    <button class="tab__links active" onclick="newsTabs(event, 'news')">news</button>
+                    <button class="tab__links" onclick="newsTabs(event, 'articles')">articles</button>
+                </div>
+            </div>
+            <div class="news__wrapper active" id="news">
+                
+                <div class="news__block">
+                    <a href="#" class="news__link">
+                        <div class="thumb">
+                            <img class="thumb__img" src="../img/news/news-2.jpg" alt="Logo GDPR" />
+                        </div>
+                        <div class="news__info">
+                            <p class="news__title">
+                                Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR
+                            </p>
+                            <p class="news__subtitle">
+                                September 29
+                            </p>
+                            <p class="news__text">
+                                And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news__block news__block--full">
+                    <a href="#" class="news__link">
+                        <div class="thumb">
+                            <img class="thumb__img" src="../img/news/news-3.jpg" alt="Millennials looking at a laptop" />
+                        </div>
+                        <div class="news__info">
+                            <p class="news__title">
+                                Millennial Testament
+                            </p>
+                            <p class="news__subtitle">
+                                August 19
+                            </p>
+                            <p class="news__text">
+                                What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news__block news__block--full">
+                    <a href="#" class="news__link">
+                        <div class="thumb">
+                            <img class="thumb__img" src="../img/news/news-4.jpg" alt="Language law" />
+                        </div>
+                        <div class="news__info">
+                            <p class="news__title">
+                                Language Law: How to Make Your Website Relevant
+                            </p>
+                            <p class="news__subtitle">
+                                August 19
+                            </p>
+                            <p class="news__text">
+                                Natalia Kyryk, head of content studio Wordfactory.ua First, it's beautiful! This is the number one argument in favor of the Ukrainian-language site. Secondly, it is effective. IN…
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news__block news__block--full">
+                    <a href="#" class="news__link">
+                        <div class="thumb">
+                            <img class="thumb__img" src="../img/news/news-5.jpg" alt="Teacher and children" />
+                        </div>
+                        <div class="news__info">
+                            <p class="news__title">
+                                Reimbursement of the child's tuition fees in kindergarten and school
+                            </p>
+                            <p class="news__subtitle">
+                                February 5, 2018
+                            </p>
+                            <p class="news__text">
+                                What we are talking about In June this year, the Verkhovna Rada amended the Tax Code of Ukraine. From now on, parents who receive an official…
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news__block news__block--full">
+                    <a href="#" class="news__link">
+                        <div class="news__info">
+                            <p class="news__title">
+                                Currency control is dead, long live currency control!
+                            </p>
+                            <p class="news__subtitle">
+                                June 14, 2018
+                            </p>
+                            <p class="news__text">
+                                Experts hold conferences, round tables and other events on "liberalization of currency legislation." Lawyers-experts-novelists rub their fingers about "ctrl + c / ctrl + v".
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="btn-primary">
+                    <a href="#" class="btn-primary__link">
+                        More publications
+                    </a>
+                </div>
+            </div>
+
+            <div class="news__wrapper" id="articles">
+                <div class="news__block">
+                    <a href="#" class="news__link">
+                        <div class="thumb">
+                            <img class="thumb__img" src="../img/news/news-1.jpg" alt="Office workers doing analytics" />
+                        </div>
+                        <div class="news__info">
+                            <p class="news__title">
+                                Equity associate
+                            </p>
+                            <p class="news__subtitle">
+                                April 22
+                            </p>
+                            <p class="news__text">
+                                I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told me that if I…
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news__block">
+                    <a href="#" class="news__link">
+                        <div class="thumb">
+                            <img class="thumb__img" src="../img/news/news-2.jpg" alt="Logo GDPR" />
+                        </div>
+                        <div class="news__info">
+                            <p class="news__title">
+                                Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR
+                            </p>
+                            <p class="news__subtitle">
+                                September 29
+                            </p>
+                            <p class="news__text">
+                                And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news__block news__block--full">
+                    <a href="#" class="news__link">
+                        <div class="thumb">
+                            <img class="thumb__img" src="../img/news/news-3.jpg" alt="Millennials looking at a laptop" />
+                        </div>
+                        <div class="news__info">
+                            <p class="news__title">
+                                Millennial Testament
+                            </p>
+                            <p class="news__subtitle">
+                                August 19
+                            </p>
+                            <p class="news__text">
+                                What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news__block news__block--full">
+                    <a href="#" class="news__link">
+                        <div class="thumb">
+                            <img class="thumb__img" src="../img/news/news-4.jpg" alt="Language law" />
+                        </div>
+                        <div class="news__info">
+                            <p class="news__title">
+                                Language Law: How to Make Your Website Relevant
+                            </p>
+                            <p class="news__subtitle">
+                                August 19
+                            </p>
+                            <p class="news__text">
+                                Natalia Kyryk, head of content studio Wordfactory.ua First, it's beautiful! This is the number one argument in favor of the Ukrainian-language site. Secondly, it is effective. IN…
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news__block news__block--full">
+                    <a href="#" class="news__link">
+                        <div class="thumb">
+                            <img class="thumb__img" src="../img/news/news-5.jpg" alt="Teacher and children" />
+                        </div>
+                        <div class="news__info">
+                            <p class="news__title">
+                                Reimbursement of the child's tuition fees in kindergarten and school
+                            </p>
+                            <p class="news__subtitle">
+                                February 5, 2018
+                            </p>
+                            <p class="news__text">
+                                What we are talking about In June this year, the Verkhovna Rada amended the Tax Code of Ukraine. From now on, parents who receive an official…
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="news__block news__block--full">
+                    <a href="#" class="news__link">
+                        <div class="news__info">
+                            <p class="news__title">
+                                Currency control is dead, long live currency control!
+                            </p>
+                            <p class="news__subtitle">
+                                June 14, 2018
+                            </p>
+                            <p class="news__text">
+                                Experts hold conferences, round tables and other events on "liberalization of currency legislation." Lawyers-experts-novelists rub their fingers about "ctrl + c / ctrl + v".
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="btn-primary">
+                    <a href="#" class="btn-primary__link">
+                        More publications
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    <!---------- Footer ----------->
+    <div class="container container--bg">
+        <footer class="footer">
+            <div class="footer__block">
+                <ul class="contacts">
+                    <li class="contacts__item">
+                        Kyiv, Mechnikova str, 14/1
+                    </li>
+                    <svg class="dot" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3" r="3" fill="#B3B3BA"/>
+                    </svg>
+                    <li class="contacts__item">
+                        <a href="#" class="contacts__link contacts__link--link">
+                            On map
+                        </a>
+                    </li>
+                </ul>
+                <ul class="contacts">
+                    <li class="contacts__item">
+                        <a href="#" class="contacts__link social">
+                            <svg class="contacts__vec" width="38" height="38" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z" fill="white"/>
+                            </svg> 
+                        </a>
+                    </li>
+                    <svg class="dot" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3" r="3" fill="#B3B3BA"/>
+                    </svg>
+                    <li class="contacts__item">
+                        <a href="tel:0800211927" class="contacts__link contacts__link--phone">
+                            0800 211 927
+                        </a>
+                    </li>
+                    <svg class="dot" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="3" cy="3" r="3" fill="#B3B3BA"/>
+                    </svg>
+                    <li class="contacts__item">
+                        <a href="mailto:0800211927" class="contacts__link contacts__link--mail">
+                            contact@forstudy.space
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__block footer__block--position">
+                <p class="footer__text">
+                    © 2021 HLEGAL Law company, LLC
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!---------- Scripts----------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/tabs.js"></script>
+    <script src="../js/modal.js"></script>
+
+    <!---------- Initialization owl-carousel ----------->
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                nav:false,
+                margin:20,
+                responsive:{
+                    0:{
+                    items:1
+                    },
+                    768:{
+                    items:4
+                    }
+
+                }
+            });
+        });
+    </script>
+</body>
+</html>

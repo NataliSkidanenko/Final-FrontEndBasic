@@ -1,0 +1,30 @@
+.news {
+    .tab {
+        @include flex(row, center, center);
+        margin-bottom: $size;
+        &__wrapper {
+            display: inline-block;
+            background-color: $color-separator;
+            border-radius: $radius;
+            overflow: hidden;
+        }
+
+        &__links {
+            padding: $size/3 $size;
+            font-weight: bold;
+            color: $main-regular;
+            background: none;
+
+            &.active {
+                background-color: $color-light;
+            }
+        }
+    }
+    &__wrapper {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
