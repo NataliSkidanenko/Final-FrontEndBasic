@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Hlegal — Team</title>
+    <title>Hlegal — Contacts</title>
 </head>
 <body>
 
@@ -27,7 +27,7 @@
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="team.html" class="nav__link nav__link--active">
+                    <a href="team.html" class="nav__link">
                         team
                     </a>
                 </li>
@@ -37,7 +37,7 @@
                     </a>
                 </li>
                 <li class="nav__item">
-                    <a href="contacts.html" class="nav__link">
+                    <a href="contacts.html" class="nav__link  nav__link--active">
                         contacts
                     </a>
                 </li>
@@ -126,7 +126,7 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="team.html" class="nav__link nav__link--active">
+                        <a href="team.html" class="nav__link">
                             team
                         </a>
                     </li>
@@ -136,7 +136,7 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="contacts.html" class="nav__link">
+                        <a href="contacts.html" class="nav__link nav__link--active">
                             contacts
                         </a>
                     </li>
@@ -148,169 +148,57 @@
     
     <!----------- Main block ----------->
     <main class="content">
+        <div class="container container--width-1440">
 
-        <!----------- Article ----------->
-        <article class="article container--width">
-            <h1 class="article__heading article__heading--nomargin">
-                We are used to taking responsibility and always guarantee honest, timely assistance, even in situations where most are powerless.
-            </h1>
-        </article>
+            <div class="contacts-feed">
+                <div class="contacts-feed__block">
+                    <div class="contacts">
+                        <a href="#" class="contacts__link contacts__link--address">
+                            Kyiv,<br>
+                            Mechnikova str, 14/1
+                        </a>
+                    </div>
+                    <div class="contacts">
+                        <a href="tel:0800211927" class="contacts__link contacts__link--phone">
+                            0800 211 927
+                        </a>
+                        <a href="mailto:contact@forstudy.space" class="contacts__link contacts__link--mail">
+                            contact@forstudy.space
+                        </a>
+                    </div>
+                    <div class="contacts">
+                        <a href="#" class="contacts__link contacts__link--social">
+                            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z" fill="#24A3FF"/>
+                            </svg>
+                            <span>
+                                Our page<br>
+                                on facebook
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts-feed__block">
+                    <form class="form" action="#" method="post">
+                        <h1 class="form__heading">
+                            We would like to help you
+                        </h1>
+                        <input class="form__input" type="text" name="name" id="name" placeholder="Name">
+                        <textarea class="form__input form__input--textarea" name="message" id="message" placeholder="Message"></textarea>
+                        <p class="form__title">
+                            How to answer you?
+                        </p>
+                        <input class="form__input" type="tel" name="phone" id="phone" placeholder="Phone number">
+                        <input class="form__input" type="email" name="email" id="email" placeholder="Email">
 
-        <!---------- Team ---------->
-        <div class="team-feed container">
-
-            <div class="team-feed__block">
-                <a href="#">
-                    <div class="thumb">
-                        <img class="thumb__img" src="../img/team/photo-alexandrovsky.png" alt="Photo Alexandrovsky" />
-                    </div>
-                    <div class="description">
-                        <div class="description__block">
-                            <p class="description__title">
-                                Alexander Alexandrovsky
-                            </p>
-                            <p class="description__subtitle">
-                                Managing partner
-                            </p>
+                        <div class="form__btn btn-primary">
+                            <input class="btn-primary__link"type="submit" value="Send message">
                         </div>
-                        <div class="description__block">
-                            <a href="#" class="description__btn">
-                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.5 15.5L8.5 8.5L1.5 1.5" stroke="#24A3FF" stroke-width="2"/>
-                                </svg>                                                  
-                            </a>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="team-feed__block">
-                <a href="#">
-                    <div class="thumb">
-                        <img class="thumb__img" src="../img/team/photo-patrikov.png" alt="Photo Patrikov" />
-                    </div>
-                    <div class="description">
-                        <div class="description__block">
-                            <p class="description__title">
-                                Evgeny Patrikov
-                            </p>
-                            <p class="description__subtitle">
-                                Equity partner, Attorney-at-law
-                            </p>
-                        </div>
-                        <div class="description__block">
-                            <a href="#" class="description__btn">
-                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.5 15.5L8.5 8.5L1.5 1.5" stroke="#24A3FF" stroke-width="2"/>
-                                </svg>                                                  
-                            </a>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="team-feed__block">
-                <a href="#">
-                    <div class="thumb">
-                        <img class="thumb__img" src="../img/team/photo-melnik.png" alt="Photo Melnik" />
-                    </div>
-                    <div class="description">
-                        <div class="description__block">
-                            <p class="description__title">
-                                Vladislav Melnik
-                            </p>
-                            <p class="description__subtitle">
-                                Associate
-                            </p>
-                        </div>
-                        <div class="description__block">
-                            <a href="#" class="description__btn">
-                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.5 15.5L8.5 8.5L1.5 1.5" stroke="#24A3FF" stroke-width="2"/>
-                                </svg>                                                  
-                            </a>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="team-feed__block">
-                <a href="#">
-                    <div class="thumb">
-                        <img class="thumb__img" src="../img/team/photo-binn.png" alt="Photo Binn" />
-                    </div>
-                    <div class="description">
-                        <div class="description__block">
-                            <p class="description__title">
-                                Sergey Binn
-                            </p>
-                            <p class="description__subtitle">
-                                Associate
-                            </p>
-                        </div>
-                        <div class="description__block">
-                            <a href="#" class="description__btn">
-                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.5 15.5L8.5 8.5L1.5 1.5" stroke="#24A3FF" stroke-width="2"/>
-                                </svg>                                                  
-                            </a>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="team-feed__block">
-                <a href="#">
-                    <div class="thumb">
-                        <img class="thumb__img" src="../img/team/photo-kobzar.png" alt="Photo Kobzar" />
-                    </div>
-                    <div class="description">
-                        <div class="description__block">
-                            <p class="description__title">
-                                Оксана Кобзарь
-                            </p>
-                            <p class="description__subtitle">
-                                Equity partner, Attorney-at-law
-                            </p>
-                        </div>
-                        <div class="description__block">
-                            <a href="#" class="description__btn">
-                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.5 15.5L8.5 8.5L1.5 1.5" stroke="#24A3FF" stroke-width="2"/>
-                                </svg>                                                  
-                            </a>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="team-feed__block">
-                <a href="#">
-                    <div class="thumb">
-                        <img class="thumb__img" src="../img/team/photo-wolk.png" alt="Photo Wolk" />
-                    </div>
-                    <div class="description">
-                        <div class="description__block">
-                            <p class="description__title">
-                                Julia Wolk
-                            </p>
-                            <p class="description__subtitle">
-                                Associate, Attorney-at-law
-                            </p>
-                        </div>
-                        <div class="description__block">
-                            <a href="#" class="description__btn">
-                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.5 15.5L8.5 8.5L1.5 1.5" stroke="#24A3FF" stroke-width="2"/>
-                                </svg>                                                  
-                            </a>
-                        </div>
-                    </div>
-                </a>
+                    </form>
+                </div>
             </div>
 
         </div>
-
     </main>
 
     <!---------- Footer ----------->
@@ -350,7 +238,7 @@
                         <circle cx="3" cy="3" r="3" fill="#B3B3BA"/>
                     </svg>
                     <li class="contacts__item">
-                        <a href="mailto:0800211927" class="contacts__link contacts__link--mail">
+                        <a href="mailto:contact@forstudy.space" class="contacts__link contacts__link--mail">
                             contact@forstudy.space
                         </a>
                     </li>

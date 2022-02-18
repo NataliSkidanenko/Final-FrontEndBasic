@@ -1,0 +1,146 @@
+// Styles for page Contacts
+
+.contacts-feed {
+
+    .contacts {
+        margin-bottom: $size;
+        font-size: 1.3125rem;
+        line-height: 1.875rem;
+        
+        &:not(:last-child) {
+            margin-bottom: $size;
+            padding-bottom: $size;
+            border-bottom: 4px solid $color-separator;
+        }
+        
+        &__link {
+            display: block;
+            color: $main-regular;
+
+            &--mail {
+                color: $active-regular;
+                margin-top: $size/2;
+            }
+
+            &--social {
+                @include flex(row, flex-start, center);
+                
+                &:hover {
+                    span {
+                        color:$accent;
+                    }
+
+                    path {
+                        fill: $accent;
+                    }
+                }
+
+                span {
+                    @extend %link-subheading;
+                    margin-left: $size/3;
+                    line-height: 1rem;
+                    transition: all .4s;
+                }
+                
+                path {
+                    transition: all .4s;
+                }
+            }
+        }
+    }
+
+    .form {
+        margin-bottom: $size;
+        padding: $size;
+        background-color: $color-bg;
+        border-radius: $radius;
+
+        &__heading {
+            @extend %heading;
+            margin-bottom: $size
+        }
+
+        &__title {
+            @extend %link-subheading;
+            margin: $size/2 0;
+            color: $color-text;
+        }
+        
+        input, textarea {
+            width: 100%;
+
+            &::placeholder {
+                color: $color-text;
+            }
+
+            &:focus {
+                outline: 1px solid $active-regular;
+            }
+        
+            &:disabled {
+                background-color: $color-bg-alt;
+            }
+
+            &:invalid {
+                color: #FF0000;
+                outline: 1px solid #FF0000;
+            }
+        }
+
+        &__input {
+            margin-bottom: $size/2;
+            padding: $size/2;
+            border-radius: 8px;
+            background-color: $color-light;
+
+            &--textarea {
+                height: 130px;
+            }
+        }
+
+        &__btn {
+            margin-top: $size/2;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .contacts-feed {
+
+        .contacts {
+            margin-bottom: $size*2;
+        }
+
+        .form {
+            margin-bottom: $size*2;
+        }
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .contacts-feed {
+        @include flex(row, space-between, flex-start);
+
+        &__block {
+            width: 47%;
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+
+    .contacts-feed {
+        width: 83%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:1920px) {
+
+    .contacts-feed {
+        width: 85%;
+        margin: 0 auto;
+    }
+}

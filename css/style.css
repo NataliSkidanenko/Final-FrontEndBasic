@@ -2,18 +2,18 @@
   background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
 
-.experience .tab__links.active, .article .feature__title, .article__heading, .news__heading, .team__title, .services__heading {
+.experience .tab__links.active, .contacts-feed .form__heading, .article .feature__title, .article__heading, .news__heading, .team__title, .services__heading {
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
 }
 
-.news__subheading, .team__subtitle, .services__subheading, .footer .contacts__link--link {
+.contacts-feed .form__title, .contacts-feed .contacts__link--social span, .news__subheading, .team__subtitle, .services__subheading, .footer .contacts__link--link {
   font-size: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #24A3FF;
 }
 
-.article .feature__title, .article__heading, .news__heading, .team__title, .services__heading {
+.contacts-feed .form__heading, .article .feature__title, .article__heading, .news__heading, .team__title, .services__heading {
   margin-top: 10px;
   font-size: 1.875rem;
   line-height: 2.2856rem;
@@ -677,6 +677,12 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
+  .container--width {
+    width: 65%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
   .header .container {
     position: relative;
   }
@@ -757,6 +763,13 @@ body {
   .footer__text {
     margin-top: 30px;
     color: #B3B3BA;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .container--width {
+    width: 75%;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -1884,21 +1897,11 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
-  .article--width.container {
-    width: 65%;
-    margin: 0 auto;
-    padding: 0;
-  }
-
   .team-feed__block {
     width: 29%;
   }
 }
 @media screen and (min-width: 1440px) {
-  .article--width.container {
-    width: 75%;
-  }
-
   .team-feed__block {
     width: 30%;
   }
@@ -1910,5 +1913,152 @@ body {
 
   .team-feed__block {
     width: 31%;
+  }
+}
+.contacts-feed .contacts {
+  margin-bottom: 30px;
+  font-size: 1.3125rem;
+  line-height: 1.875rem;
+}
+.contacts-feed .contacts:not(:last-child) {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 4px solid #E6E6F0;
+}
+.contacts-feed .contacts__link {
+  display: block;
+  color: #323264;
+}
+.contacts-feed .contacts__link--mail {
+  color: #24A3FF;
+  margin-top: 15px;
+}
+.contacts-feed .contacts__link--social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.contacts-feed .contacts__link--social:hover span {
+  color: #F0145A;
+}
+.contacts-feed .contacts__link--social:hover path {
+  fill: #F0145A;
+}
+.contacts-feed .contacts__link--social span {
+  margin-left: 10px;
+  line-height: 1rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.contacts-feed .contacts__link--social path {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.contacts-feed .form {
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: #F5F5FA;
+  border-radius: 12px;
+}
+.contacts-feed .form__heading {
+  margin-bottom: 30px;
+}
+.contacts-feed .form__title {
+  margin: 15px 0;
+  color: #B3B3BA;
+}
+.contacts-feed .form input, .contacts-feed .form textarea {
+  width: 100%;
+}
+.contacts-feed .form input::-webkit-input-placeholder, .contacts-feed .form textarea::-webkit-input-placeholder {
+  color: #B3B3BA;
+}
+.contacts-feed .form input::-moz-placeholder, .contacts-feed .form textarea::-moz-placeholder {
+  color: #B3B3BA;
+}
+.contacts-feed .form input:-ms-input-placeholder, .contacts-feed .form textarea:-ms-input-placeholder {
+  color: #B3B3BA;
+}
+.contacts-feed .form input::-ms-input-placeholder, .contacts-feed .form textarea::-ms-input-placeholder {
+  color: #B3B3BA;
+}
+.contacts-feed .form input::placeholder, .contacts-feed .form textarea::placeholder {
+  color: #B3B3BA;
+}
+.contacts-feed .form input:focus, .contacts-feed .form textarea:focus {
+  outline: 1px solid #24A3FF;
+}
+.contacts-feed .form input:disabled, .contacts-feed .form textarea:disabled {
+  background-color: #EDEDF7;
+}
+.contacts-feed .form input:invalid, .contacts-feed .form textarea:invalid {
+  color: #FF0000;
+  outline: 1px solid #FF0000;
+}
+.contacts-feed .form__input {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+.contacts-feed .form__input--textarea {
+  height: 130px;
+}
+.contacts-feed .form__btn {
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-feed .contacts {
+    margin-bottom: 60px;
+  }
+  .contacts-feed .form {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contacts-feed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contacts-feed__block {
+    width: 47%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contacts-feed {
+    width: 83%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .contacts-feed {
+    width: 85%;
+    margin: 0 auto;
   }
 }

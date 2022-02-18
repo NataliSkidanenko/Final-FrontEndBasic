@@ -1,3 +1,5 @@
+// Styles for page Team
+
 .article {
     &__heading {
         &--nomargin {
@@ -93,18 +95,7 @@
 
 @media screen and (min-width:1024px) {
 
-    .article {
-        &--width {
-            &.container {
-                width: 65%;
-                margin: 0 auto;
-                padding: 0;
-            }
-        }
-    }
-
     .team-feed {
-    
         &__block {
             width: 29%;
         }
@@ -113,16 +104,7 @@
 
 @media screen and (min-width:1440px) {
 
-    .article {
-        &--width {
-            &.container {
-                width: 75%;
-            }
-        }
-    }
-
     .team-feed {
-    
         &__block {
             width: 30%;
         }
